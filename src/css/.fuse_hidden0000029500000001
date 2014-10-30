@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'nanuvem';
+  src: url('nanuvem.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+.nanuvem-logo:before{
+	font-family: 'nanuvem';
+	content: "naNuvem";
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin-right: 0.6em;
+}
+
+
+
+body{
+	background-color: skyblue;
+}
+h1, h2, h3{
+	color: royalblue;;
+}
+
+#cabecario{
+	padding: 20px 0 20px 0;
+}
+#cabecario h1, #cabecario h2{
+	color: black !important;
+}
+#cabecario .nanuvem-logo{	
+	display: block;
+	width: 300px;
+	border-radius: 5px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-size: 1em;
+	text-shadow: 5px 5px 10px #fff;
+
+}
+
+#corpo{
+	border-radius: 5px;
+	border: solid 1px royalblue;
+	background-color: white;
+}
+
+#rodape{
+	padding: 10px 0 10px 0 ;
+}
+/* xs */
+@media (max-width: 767px) {
+	h1{
+		font-size: 1.8em;
+	}
+}
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+	h1{
+		font-size: 2.2em;
+	}
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* lg */
+@media (min-width: 1200px) {
+	
+}
