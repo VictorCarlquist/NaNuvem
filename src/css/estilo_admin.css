@@ -1,0 +1,51 @@
+		.menu {
+			border:1px solid #000;
+		}		
+
+		#top-logo{
+			width: 120px;
+			height: 100px;
+			margin-left: 60px;
+		}
+
+		.left{
+			text-align: left;
+		}
+		
+		.right
+		{
+			text-align: right;
+		}
+
+		.top{
+			height: 50px;
+			padding-top: 20px;
+		}
+
+		.footer
+		{
+			height: 50px;
+			margin-top: 10px;
+			margin-left: 1px;
+			background-color: #38454e;
+			padding-top: 10px;
+			color:#FFF;
+			font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		h1{
+			border-bottom: 1px solid black;
+		}
+
+		#search{
+			padding:1px;
+		}
+
+		
+		#user_active{
+			padding-top: 20px;
+		}
+		/*.row [class^=col-]{
+			border:1px solid black;
+			min-height: 150px
+		}*/
