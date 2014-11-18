@@ -24,35 +24,11 @@ NANUVEM.File = function (id)
 }
 
 /**
-* É responsável por enviar os dados ao servidor.
-* @param {string} url Página do servidor que deve receber os dados
-* @param {AINDA NAO DEFINIDO (ARRAY/JSON ou INT)} values Contém os dados que serão enviados ao servidor
-* @param {function} funSuccess Função que será chamada ao receber os dados.  
-* Esta função deve possuir um parametro (data) para receber os dados.
-* @returns {JSON} Retorna um objeto com JSON com os dados recebidos, 
-* a estrutura deste objeto pode variar de acordo com os valores e url enviados 
-* ao servidor.  
-*/
-NANUVEM.File.prototype.sendData = function(url, values, funSuccess)
-{
-    $.ajax({
-        url : url,
-        dataType : "json",
-        type: "post",
-        data: values,
-        success : funSuccess,
-        error: function() {
-            console.log("error on sendData: "+ NANUVEM.getFuntionName(NANUVEM.File.sendData.callee));
-        }
-    });
-}
-
-/**
 * Pega as versões de um arquivo
 */
 NANUVEM.File.prototype.getVersions = function ()
 {
-    var values = this.id;
+    var values = {id: this.id};
     var file = this;
     this.sendData(NANUVEM.URL_VERSION, values, 
         // função que será chamada ao receber os dados.
@@ -65,14 +41,62 @@ NANUVEM.File.prototype.getVersions = function ()
 /**
 * Pega as informações do arquivo
 */
-NANUVEM.File.prototype.getInfo = function(id_file)
+NANUVEM.File.prototype.getInfo = function()
 {
-    var values = this.id;
+    var values = {id: this.id};
     var file = this;
-    this.sendData(NANUVEM.URL_INFO, values, 
+    NANUVEM.sendData(NANUVEM.URL_INFO, values, 
         // função que será chamada ao receber os dados.
         function (data) {
             file.info = data;
+        }
+    );    
+}
+
+/**
+* Move o arquivo
+* @param {string} s Caminho atual do arquivo
+* @param {string} d Destino do arquivo
+*/
+NANUVEM.File.prototype.move = function(s, d)
+{
+    var values = {id: this.id, source: s, destination: d};
+    var file = this;
+    NANUVEM.sendData(NANUVEM.URL_MOVE, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            //success
+        }
+    );    
+}
+
+/**
+* Apaga o arquivo
+*/
+NANUVEM.File.prototype.delete = function()
+{
+    var values = {id: this.id}
+    var file = this;
+    NANUVEM.sendData(NANUVEM.URL_DELETE, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            //success
+        }
+    );    
+}
+
+/**
+* Renomeia o arquivo
+* @param {string} newName Novo nome do arquivo
+*/
+NANUVEM.File.prototype.rename = function(newName)
+{
+    var values = {id: this.id, newName: newName}
+    var file = this;
+    NANUVEM.sendData(NANUVEM.URL_RENAME, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            //success
         }
     );    
 }

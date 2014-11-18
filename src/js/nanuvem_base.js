@@ -24,6 +24,30 @@ NANUVEM.inherit=function(obj1,obj2){
 }
 
 /**
+* É responsável por enviar os dados ao servidor.
+* @param {string} url Página do servidor que deve receber os dados
+* @param {AINDA NAO DEFINIDO (ARRAY/JSON ou INT)} values Contém os dados que serão enviados ao servidor
+* @param {function} funSuccess Função que será chamada ao receber os dados.  
+* Esta função deve possuir um parametro (data) para receber os dados.
+* @returns {JSON} Retorna um objeto com JSON com os dados recebidos, 
+* a estrutura deste objeto pode variar de acordo com os valores e url enviados 
+* ao servidor.  
+*/
+NANUVEM.prototype.sendData = function(url, values, funSuccess)
+{
+    $.ajax({
+        url : url,
+        dataType : "json",
+        type: "post",
+        data: values,
+        success : funSuccess,
+        error: function() {
+            console.log("error on sendData: "+ NANUVEM.getFuntionName(NANUVEM.File.sendData.callee));
+        }
+    });
+}
+
+/**
 * Retorna o nome da função.
 * @returns {string} Nome da função
 * @param {object} Deve ser uma function. 
