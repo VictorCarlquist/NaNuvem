@@ -18,7 +18,9 @@
 			<div class="row">
 				<header class="top">
 					<div class = "col-sm-3 col-xs-12">
-						<a href="<?php echo site_url('adm/cliente'); ?>" title="Nanuvem"><img src="<?php echo base_url('img/logo.png'); ?>" alt="Nanuvem" id="top-logo" /></a>
+						<a href="<?php echo site_url('adm/cliente'); ?>" title="Nanuvem">
+							<spam alt="Nanuvem" class="nanuvem-logo"></spam>
+						</a>
 					</div>
 					<div class="col-sm-6 col-xs-12">
 						
@@ -30,3 +32,6 @@
 					</div>
 				</header>
 			</div>
+		</div>
+		
+			
