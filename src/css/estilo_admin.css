@@ -32,6 +32,7 @@
 
 		.menu {
 			border:1px solid #000;
+			margin-bottom: 30px;
 		}		
 
 		#top-logo{
@@ -69,15 +70,18 @@
 			border-bottom: 1px solid black;
 		}
 
-		#search{
-			padding:1px;
-		}
-
 		
 		#user_active{
 			padding-top: 20px;
+		}
+
+		#frm_cadastro{
+			padding: 15px 0px 15px 0px;
 		}
 		/*.row [class^=col-]{
 			border:1px solid black;
 			min-height: 150px
 		}*/
+		.nav-pills > li > a {
+		    border-radius: 0px;
+		}
