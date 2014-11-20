@@ -105,3 +105,42 @@ h1, h2, h3{
 @media (min-width: 1200px) {
 	
 }
+
+/*****************************/
+/* Grupo Iago, Felipe e Rafa */
+/*****************************/
+
+header.topo-inicial
+{
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#logo-inicial
+{
+	padding-top: 10px;
+}
+
+nav.nav-inicial
+{
+	background-color: white;
+	border: 1px solid royalblue;
+	border-radius: 5px;
+	padding: 3px 0px;
+	margin-bottom: 5px;
+}
+
+#opcoes-menu
+{
+	padding-top: 8px !important;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+#tabela-arquivos
+{
+	padding-top: 10px;
+}
