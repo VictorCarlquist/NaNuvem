@@ -18,15 +18,21 @@
 			<div class="row">
 				<header class="top">
 					<div class = "col-sm-3 col-xs-12">
-						<a href="<?php echo site_url('adm/cliente'); ?>" title="Nanuvem"><img src="<?php echo base_url('img/logo.png'); ?>" alt="Nanuvem" id="top-logo" /></a>
+						<a href="<?php echo site_url('adm/'); ?>" title="Nanuvem">
+							<spam alt="Nanuvem" class="nanuvem-logo"></spam>
+						</a>
 					</div>
 					<div class="col-sm-6 col-xs-12">
 						
 					</div>
 
 					<div class="col-sm-3 col-xs-12 right">
-						<img src="<?php echo base_url('img/logo-ifspcjo.jpg'); ?>" class = "hidden-xs" alt="IFSP-CJO" title = "IFSP-CJO" id = "logo-ifspcjo">
+						<img src="<?php echo base_url('img/logo-ifspcjo.jpg'); ?>" class = "hidden-xs" 
+						alt="IFSP-CJO" title = "IFSP-CJO" id = "logo-ifspcjo">
 						<p id = "user_active">Marcelo / Rodrigo <a href="#">Sair</a></p>
 					</div>
 				</header>
 			</div>
+		</div>
+		
+			
