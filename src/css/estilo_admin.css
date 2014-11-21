@@ -1,5 +1,38 @@
+		@font-face {
+		  font-family: 'nanuvem';
+		  src: url('nanuvem.ttf');
+		  font-weight: normal;
+		  font-style: normal;
+		}
+
+		.nanuvem-logo:before{
+			font-family: 'nanuvem';
+			content: 'naNuvem';	
+			padding-left: 14px;
+			font-style: normal;
+			font-weight: normal;
+			letter-spacing: 3px;
+			margin-right: 0.6em;
+		}
+
+		.nanuvem-logo{	
+			display: block;
+			width: 130px;
+			border-radius: 5px;
+			padding-top:25px;
+			padding-bottom: 30px;
+			font-size: 7px;
+			text-shadow: 5px 5px 10px #fff;
+			background-image: url("../img/bg-logo.png");
+			background-repeat: no-repeat;
+			background-size: 86%;
+			background-position: 0px -4px;
+			line-height: 50px;
+		}
+
 		.menu {
 			border:1px solid #000;
+			margin-bottom: 30px;
 		}		
 
 		#top-logo{
@@ -37,15 +70,18 @@
 			border-bottom: 1px solid black;
 		}
 
-		#search{
-			padding:1px;
-		}
-
 		
 		#user_active{
 			padding-top: 20px;
+		}
+
+		#frm_cadastro{
+			padding: 15px 0px 15px 0px;
 		}
 		/*.row [class^=col-]{
 			border:1px solid black;
 			min-height: 150px
 		}*/
+		.nav-pills > li > a {
+		    border-radius: 0px;
+		}

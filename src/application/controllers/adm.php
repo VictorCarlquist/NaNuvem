@@ -1,12 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Adm extends CI_Controller {
-	
-	public function cliente()
+
+	public function index()
 	{
+		
+		$modulo = array('modulo' => 'administracao');
+
 		$this->load->view('adm/layout/header');
-		$this->load->view('adm/cliente');
-		$this->load->view('adm/layout/footer');
+		$this->load->view('adm/layout/menu');
+		$this->load->view('adm/index');
+		$this->load->view('adm/layout/footer', $modulo);
+
 	}
 }
 
