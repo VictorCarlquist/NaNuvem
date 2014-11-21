@@ -1,3 +1,6 @@
+if (typeof(NANUVEM) == "undefined") {
+    NANUVEM = {};
+}
 (function (NANUVEM){ // "namespace"
 
 // Herança
@@ -33,16 +36,16 @@ NANUVEM.inherit=function(obj1,obj2){
 * a estrutura deste objeto pode variar de acordo com os valores e url enviados 
 * ao servidor.  
 */
-NANUVEM.prototype.sendData = function(url, values, funSuccess)
+NANUVEM.sendData = function(url, values, funSuccess)
 {
     $.ajax({
         url : url,
         dataType : "json",
-        type: "post",
-        data: values,
+        type: "get",
+        data: "test",
         success : funSuccess,
-        error: function() {
-            console.log("error on sendData: "+ NANUVEM.getFuntionName(NANUVEM.File.sendData.callee));
+        error: function(a, b, c) {
+            console.log(b +" SendData: " + " " + a +" "+ c);
         }
     });
 }
@@ -52,9 +55,9 @@ NANUVEM.prototype.sendData = function(url, values, funSuccess)
 * @returns {string} Nome da função
 * @param {object} Deve ser uma function. 
 */
-NANUVEM.prototype.getFunctionName = function (fun) 
+NANUVEM.getFunctionName = function (fun) 
 { 
-    return fun.toString().split(" ", 2).join(" "));
+    return fun.toString().split(" ", 2).join(" ");
 }
 
 })(NANUVEM);

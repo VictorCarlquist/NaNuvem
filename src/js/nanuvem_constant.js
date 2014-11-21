@@ -10,7 +10,7 @@ NANUVEM.URL_VERSION = "index.php/XXXXXXX";
 * @constant 
 * @description Armazena a url para enviar e receber dados sobre as informações do arquivo
 */
-NANUVEM.URL_INFO = "index.php/XXXXXXX";
+NANUVEM.URL_INFO = "ajax_file_info.txt";
 
 /**
 * @constant 
@@ -29,5 +29,17 @@ NANUVEM.URL_DELETE = "index.php/XXXXXXX";
 * @description Armazena a url para enviar e receber dados para renomear o arquivo
 */
 NANUVEM.URL_RENAME = "index.php/XXXXXXX";
+
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados para adicionar um comentario na versao
+*/
+NANUVEM.URL_VERSION_ADDCOMMENT = "index.php/XXXXXXX";
+
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados para receber todos os dados de uma versao
+*/
+NANUVEM.URL_VERSION_CONSTRUCTOR = "index.php/XXXXXXX";
 
 })(NANUVEM);
