@@ -1,0 +1,12 @@
+{
+    "dirs": [
+        {"name": "dir 1", "id":"aaa1"},
+        {"name": "dir 2", "id":"bbb2"},
+        {"name": "dir 3",  "id":"ccc3"}
+    ],
+    "files":[
+        {"name": "arq 1", "id":"xxx1", "size": "1000"},
+        {"name": "arq 2", "id":"xxx2", "size": "550"},
+        {"name": "arq 3", "id":"xxx3", "size": "10990"}
+    ]
+}

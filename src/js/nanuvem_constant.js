@@ -42,4 +42,10 @@ NANUVEM.URL_VERSION_ADDCOMMENT = "index.php/XXXXXXX";
 */
 NANUVEM.URL_VERSION_CONSTRUCTOR = "index.php/XXXXXXX";
 
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados sobre a versão do arquivo
+*/
+NANUVEM.URL_LOAD_DIR = "ajax_dirs_and_files.txt";
+
 })(NANUVEM);
