@@ -621,119 +621,119 @@ insert into assinaturas (codigo_cliente, codigo_periodo, data_hora, dias)
 /*
 	Diretórios
 */
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (1, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (1, 1, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (1, 1, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (1, 1, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (1, 1, 'Músicas');
     
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (2, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (2, 6, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (2, 6, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (2, 6, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (2, 6, 'Músicas');
     
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (3, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (3, 11, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (3, 11, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (3, 11, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (3, 11, 'Músicas');
 
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (4, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (4, 16, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (4, 16, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (4, 16, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (4, 16, 'Músicas');
 
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (5, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (5, 21, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (5, 21, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (5, 21, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (5, 21, '/Músicas');
 
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (6, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (6, 26, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (6, 26, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (6, 26, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (6, 26, 'Músicas');
 
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (7, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (7, 31, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (7, 31, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (7, 31, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (7, 31, 'Músicas');
     
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (8, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (8, 36, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (8, 36, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (8, 36, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (8, 36, 'Músicas');
 
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (9, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (9, 41, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (9, 41, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (9, 41, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (9, 41, 'Músicas');
 
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (10, null, '/');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (10, 46, 'Arquivos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (10, 46, 'Vídeos');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (10, 46, 'Imagens');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (10, 46, 'Músicas');
     
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (10, 50, 'Álbum 01');
-insert into diretorios (codigo_cliente, diretorios_pai, nomes)
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
 	values (10, 51, 'Sub do Álbum 01');
 
 select * from  diretorios;
@@ -811,25 +811,25 @@ select * from arquivos;
 /*
 	Compartilhamento_arquivo
 */
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (1, 1, 0);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (2, 10, 1);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (3, 15, 2);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (4, 20, 0);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (5, 25, 1);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (6, 30, 2);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (7, 4, 0);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (8, 5, 1);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (9, 6, 2);
-insert into compartilhamento_arquivo (codigo_clientes, codigo_arquivos, permissao) 
+insert into compartilhamento_arquivo (codigo_cliente, codigo_arquivo, permissao) 
 	values (10, 7, 0);
 
 select * from compartilhamento_arquivo;
@@ -863,94 +863,94 @@ select * from compartilhamento_diretorio;
 /*
 	Tags
 */
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 1);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 1);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 1);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 1);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 2);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 2);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 2);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 2);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 3);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 3);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 3);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 3);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 4);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 4);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 4);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 4);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 5);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 5);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 5);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 5);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 6);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 6);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 6);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 6);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 7);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 7);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 7);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 7);
 
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 8);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 8);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 8);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 8);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 9);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 9);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 9);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 9);
     
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('vídeos', 10);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('pdfs', 10);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('imagens', 10);
-insert into tags (palavras, codigo_clientes)
+insert into tags (palavra, codigo_cliente)
 	values ('docs', 10);
     
 select * from tags;
@@ -958,25 +958,25 @@ select * from tags;
 /*
 	Tags_arquivos
 */
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (1, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (2, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (3, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (4, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (5, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (6, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (7, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (8, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (9, 4);
-insert into tags_arquivos (codigo_arquivos, codigo_tags) 
+insert into tags_arquivos (codigo_arquivo, codigo_tag) 
 	values (10, 4);
     
 select * from tags_arquivos;
@@ -984,25 +984,25 @@ select * from tags_arquivos;
 /*
  Versões
 */
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 1);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 1);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 3);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 3);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 5);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 5);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 7);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 7);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 9);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 9);
     
 select * from versoes;
@@ -1062,14 +1062,14 @@ insert into grupo (nome) values ('Latinas');
 /*******************************************************************************
  * Views
  *******************************************************************************/
-select * from versoes inner join arquivos on versoes.codigo_arquivos=arquivos.codigo where clientes_codigo=1;
+select * from versoes inner join arquivos on versoes.codigo_arquivo=arquivos.codigo where codigo_cliente=1;
 
 select * from arquivos a where a.codigo = 1;
-select codigo_arquivos, tamanhos, data_hora from versoes v where codigo_arquivos=1 order by data_hora asc limit 1;
+select codigo_arquivo, tamanho, data_hora from versoes v where codigo_arquivo=1 order by data_hora asc limit 1;
 
 drop view listDirsFromClients;
 create view listDirsFromClients as
-select c.codigo as 'codCliente', d.codigo as 'dir', d.diretorios_pai as 'fatherDir', d.nomes as 'dirName' from 
+select c.codigo as 'codCliente', d.codigo as 'dir', d.diretorio_pai as 'fatherDir', d.nome as 'dirName' from 
 	diretorios d inner join clientes c on d.codigo_cliente=c.codigo;
 
 select * from listDirsFromClients where codCliente=1;
