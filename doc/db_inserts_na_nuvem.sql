@@ -984,25 +984,25 @@ select * from tags_arquivos;
 /*
  Versões
 */
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 1);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 1);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 3);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 3);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 5);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 5);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 7);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 7);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 9);
-insert into versoes (codigo_arquivos, situacoes, data_hora, tamanhos, clientes_codigo)
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
 	values (1, 0, '2015-11-20', 2000, 9);
     
 select * from versoes;
@@ -1062,14 +1062,14 @@ insert into grupo (nome) values ('Latinas');
 /*******************************************************************************
  * Views
  *******************************************************************************/
-select * from versoes inner join arquivos on versoes.codigo_arquivos=arquivos.codigo where clientes_codigo=1;
+select * from versoes inner join arquivos on versoes.codigo_arquivo=arquivos.codigo where codigo_cliente=1;
 
 select * from arquivos a where a.codigo = 1;
-select codigo_arquivos, tamanhos, data_hora from versoes v where codigo_arquivos=1 order by data_hora asc limit 1;
+select codigo_arquivo, tamanho, data_hora from versoes v where codigo_arquivo=1 order by data_hora asc limit 1;
 
 drop view listDirsFromClients;
 create view listDirsFromClients as
-select c.codigo as 'codCliente', d.codigo as 'dir', d.diretorios_pai as 'fatherDir', d.nomes as 'dirName' from 
+select c.codigo as 'codCliente', d.codigo as 'dir', d.diretorio_pai as 'fatherDir', d.nome as 'dirName' from 
 	diretorios d inner join clientes c on d.codigo_cliente=c.codigo;
 
 select * from listDirsFromClients where codCliente=1;
