@@ -22,7 +22,7 @@ NANUVEM.URL_MOVE = "index.php/XXXXXXX";
 * @constant 
 * @description Armazena a url para enviar e receber dados para deletar o arquivo
 */
-NANUVEM.URL_DELETE = "index.php/XXXXXXX";
+NANUVEM.URL_DELETE_FILE = "http://localhost/nanuvem/index.php/directory_manager/delete_file";
 
 /**
 * @constant 
@@ -46,6 +46,11 @@ NANUVEM.URL_VERSION_CONSTRUCTOR = "index.php/XXXXXXX";
 * @constant 
 * @description Armazena a url para enviar e receber dados sobre a versão do arquivo
 */
-NANUVEM.URL_LOAD_DIR = "ajax_dirs_and_files.txt";
+NANUVEM.URL_LOAD_DIR = "http://localhost/nanuvem/index.php/directory_manager/get_directories";
+
+NANUVEM.URL_LOAD_FILES = "http://localhost/nanuvem/index.php/directory_manager/get_files";
+
+NANUVEM.TYPE_DIRECTORY = 0;
+NANUVEM.TYPE_FILE = 1;
 
 })(NANUVEM);
