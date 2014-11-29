@@ -38,22 +38,32 @@
         }
         var DM = new NANUVEM.DirectoryManager(
                 function (data, type) {
+
+                    // Este if apenas será chamado na primeira vez que o site 
+                    // for carredo. Ele irá carregar todos os diretórios, sem
+                    // os arquivos, para criar a "arvore de diretórios".
                     if (type == NANUVEM.TYPE_DIRECTORY) {
                         
                         // Exemplo de acesso aos diretorios (hierarquia)
                         dados = " ";
                         printDir(DM.dirs[0], -1); // root "/"
                         document.getElementById("text1").innerHTML = dados;
+                        
+                        // Campos dirs[0]
                         // "codCliente":"1",
                         // "dir":"2",
                         // "fatherDir":"1",
                         // "dirName":"Arquivos"
-                        
+                        // dirs: []
+                        // files: []
                         
                         // Carrega os arquivos dentro do diretório
                         // neste caso irá carregar os arquivos no "/".
                         DM.changeDirectory(DM.dirs[0].dirs[0].dir);
                     }
+                    // Este if será chamado quando:
+                    // 1 - A função |changeDirectory| for chamada
+                    // 2 - Um arquivo sofrer modificações (delete, move, etc)
                     if (type == NANUVEM.TYPE_FILE) {
 
                         // Verifica se os arquivos da pasta foram carregados,
@@ -63,7 +73,7 @@
                             return;
                         }
 
-                        // FILE
+                        // Campos files[0]
                         // codigo":"3",
                         // "codigo_diretorio":"2",
                         // "nome":"arquivo 03",
