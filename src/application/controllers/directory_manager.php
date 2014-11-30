@@ -54,7 +54,7 @@ class Directory_manager extends CI_Controller
         $this->load->model('Directory_model', 'Directory');
 
         $cod_version = $this->input->post('id');
-        $result = $this->Directory->get_comments($cod_version = 1);
+        $result = $this->Directory->get_comments($cod_version);
 
         echo '{"comments":'.json_encode($result).'}';
     }

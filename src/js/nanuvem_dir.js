@@ -58,7 +58,7 @@ NANUVEM.DirectoryManager.prototype.getDirs = function ()
             for (var i = 0; i < data.dirs.length; i++) {
                 data.dirs[i].dirs = [];
                 for (var j = 0; j < data.dirs.length; j++) {
-                    if (data.dirs[i].dir == data.dirs[j].fatherDir) {
+                    if (data.dirs[i].id == data.dirs[j].id_father) {
                         data.dirs[i].dirs.push(data.dirs[j]);
                     }
                 }
@@ -85,7 +85,7 @@ NANUVEM.DirectoryManager.prototype.getFiles = function (id_dir)
         function (data) {
 
             for (var i = 0; i < mf.dirs.length; i++) {
-                if (mf.dirs[i].dir == id_dir) {
+                if (mf.dirs[i].id == id_dir) {
                     mf.dirs[i].files = data.files;
                     break;
                 }
@@ -125,7 +125,7 @@ NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
             var dir;
             var file;
             for (var i = 0; i < mf.dirs.length; i++) {
-                if (mf.dirs[i].dir == id_dir) {
+                if (mf.dirs[i].id == id_dir) {
                     dir = mf.dirs[i];
                     break;
                 }

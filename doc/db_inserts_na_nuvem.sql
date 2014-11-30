@@ -703,7 +703,7 @@ select codigo_arquivo, tamanho, data_hora from versoes v where codigo_arquivo=1 
 
 drop view listDirsFromClients;
 create view listDirsFromClients as
-select c.codigo as 'codCliente', d.codigo as 'dir', d.diretorio_pai as 'fatherDir', d.nome as 'dirName' from 
+select c.codigo as 'id_client', d.codigo as 'id', d.diretorio_pai as 'id_father', d.nome as 'name' from 
   diretorios d inner join clientes c on d.codigo_cliente=c.codigo order by d.diretorio_pai;
 
 select * from listDirsFromClients where codCliente=1;

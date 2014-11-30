@@ -40,7 +40,7 @@
                 space+= "+";
             }
 
-            dados += space + dir.dirName + "<br>";
+            dados += space + dir.name + "<br>";
             
             if(!dir.dirs)
                 return;
@@ -61,26 +61,25 @@
                         document.getElementById("text1").innerHTML = dados;
                         
                         // Campos dirs[0]
-                        // "codCliente":"1",
-                        // "dir":"2",
-                        // "fatherDir":"1",
-                        // "dirName":"Arquivos"
+                        // 'id_client', 
+                        // 'id', 
+                        // 'id_father'
+                        // 'name'
                         // dirs: []
                         // files: []
                         
                         // Carrega os arquivos dentro do diretório.
-                        DM.changeDirectory(DM.dirs[0].dirs[0].dir);
+                        DM.changeDirectory(DM.dirs[0].dirs[0].id);
                     }
                     // Este if será chamado quando:
                     // 1 - A função |changeDirectory| for chamada (arquivos carregados)
                     // 2 - Um arquivo sofrer modificações (delete, move)
-                    // 3 - Receber versões
                     if (type == NANUVEM.TYPE_FILE) {
 
                         // Verifica se os arquivos da pasta foram carregados,
                         // senão, solicita o carregamento desses arquivos.
                         if (!DM.dirs[0].dirs[0].files) {
-                            DM.changeDirectory(DM.dirs[0].dirs[0].dir);
+                            DM.changeDirectory(DM.dirs[0].dirs[0].id);
                             return;
                         }
 
@@ -94,7 +93,7 @@
                         "<a href='javascript:deleteFile("+file.codigo+","+ file.codigo_diretorio+");'>" + file.nome + "</a> <br>";
 
                         if (!DM.dirs[0].files) {
-                            DM.changeDirectory(DM.dirs[0].dir);
+                            DM.changeDirectory(DM.dirs[0].id);
                             return;
                         }
                         file = DM.dirs[0].files[0];

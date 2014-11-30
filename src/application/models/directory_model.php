@@ -56,9 +56,10 @@ class Directory_model extends CI_Model {
     /*
     * Directory
     */
-    public function get_directories($cod_cliente)
+    public function get_directories($cod_client)
     {
-        $where = array('codCliente' => $cod_cliente);
+
+        $where = array('id_client' => $cod_client);
         $query = $this->db->get_where('listDirsFromClients', $where);
         return $query->result();
     }
