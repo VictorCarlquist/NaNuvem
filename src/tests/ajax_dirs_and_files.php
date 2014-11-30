@@ -105,16 +105,16 @@
                     // arquivo que recebeu as versões
                     if (type == NANUVEM.TYPE_VERSIONS) {
                         // Campos do versions []
-                        //"codigo":"1",
-                        // "codigo_arquivo":"1",
-                        // "situacao":"0",
-                        // "data_hora":"2015-11-20 00:00:00",
-                        // "tamanho":"2000",
-                        // "codigo_cliente":"1",
-                        // "codigo_diretorio":"1",
-                        // "nome":"arquivo 01",
-                        // "extensao":"txt"}
-                        alert(obj.versions[0].tamanho);
+                        // "id"
+                        // "id_file");
+                        // $this->db->select("situacao as status");
+                        // "date_time");
+                        // "size");
+                        // "id_client");
+                        // "as id_dir");
+                        // "name");
+                        // "ext");
+                        alert(obj.versions[0].size);
                     }
 
                     // Quando este if for verdadeiro, o parametro |obj| será 

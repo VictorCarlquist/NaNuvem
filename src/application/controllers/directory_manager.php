@@ -18,7 +18,7 @@ class Directory_manager extends CI_Controller
         $this->load->model('Directory_model', 'Directory');
 
         $cod_arq = $this->input->post('id');
-        $result = $this->Directory->get_versions($cod_arq);
+        $result = $this->Directory->get_versions($cod_arq = 1);
 
         echo '{"versions":'.json_encode($result).'}';
     }

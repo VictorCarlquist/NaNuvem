@@ -27,11 +27,19 @@ class Directory_model extends CI_Model {
     {
         // select * from versoes inner join arquivos on 
         // versoes.codigo_arquivo=arquivos.codigo where codigo_arquivo=1;
-        $this->db->select('*');
+        $this->db->select("versoes.codigo as id");
+        $this->db->select("codigo_arquivo as id_file");
+        $this->db->select("situacao as status");
+        $this->db->select("data_hora as date_time");
+        $this->db->select("tamanho as size");
+        $this->db->select("codigo_cliente as id_client");
+        $this->db->select("codigo_diretorio as id_dir");
+        $this->db->select("nome as name");
+        $this->db->select("extensao as ext");
+
         $this->db->from('versoes');
         $this->db->join('arquivos', 'versoes.codigo_arquivo = arquivos.codigo');
         $this->db->where('codigo_arquivo', $cod_arq);
-        
         $query = $this->db->get();
         return $query->result();
     }
