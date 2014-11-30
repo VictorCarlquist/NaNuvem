@@ -259,6 +259,12 @@ insert into diretorios (codigo_cliente, diretorio_pai, nome)
   values (1, 1, 'Músicas');
 insert into diretorios (codigo_cliente, diretorio_pai, nome)
   values (1, 2, 'Filmes');
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
+  values (1, 2, 'Pasta1');
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
+  values (1, 2, 'Pasta2');
+insert into diretorios (codigo_cliente, diretorio_pai, nome)
+  values (1, 7, 'A_Pasta_1');
     
 insert into diretorios (codigo_cliente, diretorio_pai, nome)
   values (2, null, '/');

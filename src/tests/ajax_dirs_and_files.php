@@ -32,14 +32,21 @@
         }
 
         var dados;
-        function printDir(dir, i)
+        
+        function printDir(dir, i, tab)
         {
-            dados += i +" + "+ dir.dirName + "<br>";
+            var space = "";
+            for(var i = 0 ; i < tab; i++) {
+                space+= "+";
+            }
+
+            dados += space + dir.dirName + "<br>";
+            
             if(!dir.dirs)
                 return;
 
             for (var i = 0; i < dir.dirs.length; i++)
-                printDir(dir.dirs[i], i);
+                printDir(dir.dirs[i], i, tab+1);
         }
         var DM = new NANUVEM.DirectoryManager(
                 function (data, type) {
@@ -50,7 +57,7 @@
                         
                         // Exemplo de acesso aos diretorios (hierarquia)
                         dados = " ";
-                        printDir(DM.dirs[0], -1); // root "/"
+                        printDir(DM.dirs[0], -1, 0); // root "/"
                         document.getElementById("text1").innerHTML = dados;
                         
                         // Campos dirs[0]
