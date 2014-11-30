@@ -131,7 +131,7 @@ NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
                 }
             }
             for (var i = 0; i < dir.files.length; i++) {
-                if (dir.files[i].codigo == id_file) {
+                if (dir.files[i].id == id_file) {
                     dir.files[i].versions = data.versions;
                     file = dir.files[i];
                     break;
