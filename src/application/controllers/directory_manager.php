@@ -40,4 +40,13 @@ class Directory_manager extends CI_Controller
         $this->Directory->delete_file($cod_file);
     }
 
+    public function move_file()
+    {
+        $this->load->model('Directory_model', 'Directory');
+
+        $cod_file = $this->input->post('id');
+        $to_cod_dir = $this->input->post('to');
+        $this->Directory->move_file($cod_file, $to_cod_dir);
+    }
+
 }

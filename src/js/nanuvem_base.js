@@ -49,20 +49,6 @@ NANUVEM.sendData = function(url, values, funSuccess)
         }
     });
 }
-NANUVEM.sendDataTest = function(url, values, funSuccess)
-{
-    $.ajax({
-        url : url,
-        dataType : "html",
-        type: "post",
-        data: values,
-        success : funSuccess,
-        error: function(a, b, c) {
-            console.log(b +" SendData: " + " " + a +" "+ c);
-        }
-    });
-}
-
 
 /**
 * Retorna o nome da função.

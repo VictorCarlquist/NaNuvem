@@ -71,6 +71,10 @@ NANUVEM.DirectoryManager.prototype.getDirs = function ()
     );
 }
 
+/**
+* Solicita os arquivos que estão dentro de um diretório
+* @param {int} id_dir ID do diretório que deve ser carregado os arquivos
+*/
 NANUVEM.DirectoryManager.prototype.getFiles = function (id_dir)
 {
     var values = {'id':id_dir};
@@ -92,6 +96,11 @@ NANUVEM.DirectoryManager.prototype.getFiles = function (id_dir)
     );
 }
 
+/**
+* Deleta o arquivos especificado
+* @param {int} id_file ID do arquivo  que será deletado
+* @param {int} id_dir ID do diretório que o arquivo que será deletado está
+*/
 NANUVEM.DirectoryManager.prototype.deleteFile = function (id_file, id_dir)
 {
     var values = {'id':id_file};
@@ -130,6 +139,20 @@ NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
             }
             if (mf.callback)
                 mf.callback(data, NANUVEM.TYPE_FILE, file);
+        }
+    );
+}
+
+
+NANUVEM.DirectoryManager.prototype.moveFile = function (id_file, id_dir_to)
+{
+    var values = {'id':id_file, 'to':id_dir_to};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_MOVE_FILE, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getFiles(id_dir_to);
         }
     );
 }

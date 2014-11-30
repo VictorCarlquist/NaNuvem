@@ -35,4 +35,11 @@ class Directory_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function move_file($cod_arq, $to_cod_dir)
+    {
+        $data = array('codigo_diretorio' => $to_cod_dir);
+        $this->db->where('codigo', $cod_arq);
+        $this->db->update('arquivos', $data);
+    }
 }

@@ -16,7 +16,7 @@ NANUVEM.URL_INFO = "ajax_file_info.txt";
 * @constant 
 * @description Armazena a url para enviar e receber dados para mover o arquivo
 */
-NANUVEM.URL_MOVE = "index.php/XXXXXXX";
+NANUVEM.URL_MOVE_FILE = "http://localhost/nanuvem/index.php/directory_manager/move_file";
 
 /**
 * @constant 
