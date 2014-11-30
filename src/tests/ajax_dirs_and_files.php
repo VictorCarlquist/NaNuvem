@@ -84,13 +84,13 @@
                         }
 
                         // Campos files[0]
-                        // "codigo":"3",
-                        // "codigo_diretorio":"2",
-                        // "nome":"arquivo 03",
-                        // "extensao":"txt"
+                        // id :1
+                        // id_dir:2
+                        // name:"nome"
+                        // ext:"txt"
                         var file = DM.dirs[0].dirs[0].files[0];
                         document.getElementById("text2").innerHTML =
-                        "<a href='javascript:deleteFile("+file.codigo+","+ file.codigo_diretorio+");'>" + file.nome + "</a> <br>";
+                        "<a href='javascript:deleteFile("+file.id+","+ file.id_dir+");'>" + file.name + "</a> <br>";
 
                         if (!DM.dirs[0].files) {
                             DM.changeDirectory(DM.dirs[0].id);
@@ -98,7 +98,7 @@
                         }
                         file = DM.dirs[0].files[0];
                         document.getElementById("text2").innerHTML +=
-                        "<a href='javascript:getVersions("+file.codigo+","+ file.codigo_diretorio+");'>" + file.nome + "</a>";
+                        "<a href='javascript:getVersions("+file.id+","+ file.id_dir+");'>" + file.name + "</a>";
                         
                     }
                     // Quando este if for verdadeiro, o parametro |obj| será o 

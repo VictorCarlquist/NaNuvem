@@ -8,6 +8,10 @@ class Directory_model extends CI_Model {
     public function get_files($cod_diretorio)
     {
         $where = array('codigo_diretorio' => $cod_diretorio);
+        $this->db->select("codigo as id");
+        $this->db->select("codigo_diretorio as id_dir");
+        $this->db->select("nome as name");
+        $this->db->select("extensao as ext");
         $query = $this->db->get_where('arquivos', $where);
         return $query->result();
     }
