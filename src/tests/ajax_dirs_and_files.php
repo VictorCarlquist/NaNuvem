@@ -106,14 +106,14 @@
                     if (type == NANUVEM.TYPE_VERSIONS) {
                         // Campos do versions []
                         // "id"
-                        // "id_file");
-                        // $this->db->select("situacao as status");
-                        // "date_time");
-                        // "size");
-                        // "id_client");
-                        // "as id_dir");
-                        // "name");
-                        // "ext");
+                        // "id_file"
+                        // $this->db->select("situacao as status"
+                        // "date_time"
+                        // "size"
+                        // "id_client"
+                        // "as id_dir"
+                        // "name"
+                        // "ext"
                         alert(obj.versions[0].size);
                     }
 
@@ -121,10 +121,10 @@
                     // a versão com os comentários preenchidos
                     if (type == NANUVEM.TYPE_VERSION_COMMENTS) {
                         // Campos do comments []
-                        // "codigo":"1",
-                        // "codigo_versao":"1",
-                        // "texto":"Coment\u00e1rio 01",
-                        // "data_hora":"2014-11-20 00:00:00"
+                        // "id"
+                        // "id_version"
+                        // "text"
+                        // "date_time"
                         alert(obj.comments[0].texto);
                     }
                     

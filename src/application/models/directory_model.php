@@ -60,6 +60,11 @@ class Directory_model extends CI_Model {
 
     public function get_comments($cod_versao)
     {
+        //{"codigo":"1","codigo_versao":"1","texto":"Coment\u00e1rio 01","data_hora":"2014-11-20 00:00:00"}
+        $this->db->select("codigo as id");
+        $this->db->select("codigo_versao as id_version");
+        $this->db->select("texto as text");
+        $this->db->select("data_hora as date_time");
         $where = array('codigo_versao' => $cod_versao);
         $query = $this->db->get_where('comentarios', $where);
         return $query->result();
