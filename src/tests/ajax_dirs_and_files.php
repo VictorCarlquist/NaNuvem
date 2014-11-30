@@ -26,6 +26,11 @@
             DM.deleteFile(codigo, codigo_diretorio);
         }
 
+        function getVersions(codigo, codigo_diretorio)
+        {
+            DM.getVersions(codigo, codigo_diretorio);
+        }
+
         var dados;
         function printDir(dir, i)
         {
@@ -38,7 +43,6 @@
         }
         var DM = new NANUVEM.DirectoryManager(
                 function (data, type) {
-
                     // Este if apenas será chamado na primeira vez que o site 
                     // for carredo. Ele irá carregar todos os diretórios, sem
                     // os arquivos, para criar a "arvore de diretórios".
@@ -57,8 +61,7 @@
                         // dirs: []
                         // files: []
                         
-                        // Carrega os arquivos dentro do diretório
-                        // neste caso irá carregar os arquivos no "/".
+                        // Carrega os arquivos dentro do diretório.
                         DM.changeDirectory(DM.dirs[0].dirs[0].dir);
                     }
                     // Este if será chamado quando:
@@ -74,13 +77,21 @@
                         }
 
                         // Campos files[0]
-                        // codigo":"3",
+                        // "codigo":"3",
                         // "codigo_diretorio":"2",
                         // "nome":"arquivo 03",
                         // "extensao":"txt"
                         var file = DM.dirs[0].dirs[0].files[0];
                         document.getElementById("text2").innerHTML =
-                        "<a href='javascript:deleteFile("+file.codigo+","+ file.codigo_diretorio+");'>" + file.nome + "</a>";
+                        "<a href='javascript:deleteFile("+file.codigo+","+ file.codigo_diretorio+");'>" + file.nome + "</a> <br>";
+
+                        if (!DM.dirs[0].files) {
+                            DM.changeDirectory(DM.dirs[0].dir);
+                            return;
+                        }
+                        file = DM.dirs[0].files[0];
+                        document.getElementById("text2").innerHTML +=
+                        "<a href='javascript:getVersions("+file.codigo+","+ file.codigo_diretorio+");'>" + file.nome + "</a>";
                         
                     }
                     

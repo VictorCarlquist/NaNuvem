@@ -104,4 +104,31 @@ NANUVEM.DirectoryManager.prototype.deleteFile = function (id_file, id_dir)
     );
 }
 
+NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
+{
+    var values = {'id':id_file};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_VERSIONS, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            var dir;
+            for (var i = 0; i < mf.dirs.length; i++) {
+                if (mf.dirs[i].dir == id_dir) {
+                    dir = mf.dirs[i];
+                    break;
+                }
+            }
+            for (var i = 0; i < dir.files.length; i++) {
+                if (dir.files[i].codigo == id_file) {
+                    dir.files[i].versions = data.versions;
+                    break;
+                }
+            }
+            if (mf.callback)
+                mf.callback(data, NANUVEM.TYPE_FILE);
+        }
+    );
+}
+
 })(NANUVEM);

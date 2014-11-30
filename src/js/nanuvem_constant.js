@@ -4,7 +4,7 @@
 * @constant 
 * @description Armazena a url para enviar e receber dados sobre a versão do arquivo
 */
-NANUVEM.URL_VERSION = "index.php/XXXXXXX";
+NANUVEM.URL_VERSIONS = "http://localhost/nanuvem/index.php/directory_manager/get_versions";
 
 /**
 * @constant 
@@ -35,12 +35,6 @@ NANUVEM.URL_RENAME = "index.php/XXXXXXX";
 * @description Armazena a url para enviar e receber dados para adicionar um comentario na versao
 */
 NANUVEM.URL_VERSION_ADDCOMMENT = "index.php/XXXXXXX";
-
-/**
-* @constant 
-* @description Armazena a url para enviar e receber dados para receber todos os dados de uma versao
-*/
-NANUVEM.URL_VERSION_CONSTRUCTOR = "index.php/XXXXXXX";
 
 /**
 * @constant 

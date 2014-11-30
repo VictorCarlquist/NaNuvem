@@ -16,10 +16,23 @@ class Directory_model extends CI_Model {
         return $query->result();
     }
 
-    public function delete_file($cod)
+    public function delete_file($cod_arq)
     {
         // TODO : Consertar isso!
         $this->db->delete('versoes', array('codigo_arquivo' => $cod));
         $this->db->delete('arquivos', array('codigo' => $cod)); 
+    }
+
+    public function get_versions($cod_arq)
+    {
+        // select * from versoes inner join arquivos on 
+        // versoes.codigo_arquivo=arquivos.codigo where codigo_arquivo=1;
+        $this->db->select('*');
+        $this->db->from('versoes');
+        $this->db->join('arquivos', 'versoes.codigo_arquivo = arquivos.codigo');
+        $this->db->where('codigo_arquivo', $cod_arq);
+        
+        $query = $this->db->get();
+        return $query->result();
     }
 }
