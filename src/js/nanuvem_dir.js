@@ -79,6 +79,7 @@ NANUVEM.DirectoryManager.prototype.getFiles = function (id_dir)
     NANUVEM.sendData(NANUVEM.URL_LOAD_FILES, values, 
         // função que será chamada ao receber os dados.
         function (data) {
+
             for (var i = 0; i < mf.dirs.length; i++) {
                 if (mf.dirs[i].dir == id_dir) {
                     mf.dirs[i].files = data.files;
@@ -113,6 +114,7 @@ NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
         // função que será chamada ao receber os dados.
         function (data) {
             var dir;
+            var file;
             for (var i = 0; i < mf.dirs.length; i++) {
                 if (mf.dirs[i].dir == id_dir) {
                     dir = mf.dirs[i];
@@ -122,11 +124,12 @@ NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
             for (var i = 0; i < dir.files.length; i++) {
                 if (dir.files[i].codigo == id_file) {
                     dir.files[i].versions = data.versions;
+                    file = dir.files[i];
                     break;
                 }
             }
             if (mf.callback)
-                mf.callback(data, NANUVEM.TYPE_FILE);
+                mf.callback(data, NANUVEM.TYPE_FILE, file);
         }
     );
 }

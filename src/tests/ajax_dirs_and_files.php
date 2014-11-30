@@ -65,8 +65,9 @@
                         DM.changeDirectory(DM.dirs[0].dirs[0].dir);
                     }
                     // Este if será chamado quando:
-                    // 1 - A função |changeDirectory| for chamada
-                    // 2 - Um arquivo sofrer modificações (delete, move, etc)
+                    // 1 - A função |changeDirectory| for chamada (arquivos carregados)
+                    // 2 - Um arquivo sofrer modificações (delete, move)
+                    // 3 - Receber versões
                     if (type == NANUVEM.TYPE_FILE) {
 
                         // Verifica se os arquivos da pasta foram carregados,
