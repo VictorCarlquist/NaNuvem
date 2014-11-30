@@ -138,7 +138,7 @@ NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
                 }
             }
             if (mf.callback)
-                mf.callback(data, NANUVEM.TYPE_FILE, file);
+                mf.callback(data, NANUVEM.TYPE_VERSIONS, file);
         }
     );
 }
@@ -153,6 +153,21 @@ NANUVEM.DirectoryManager.prototype.moveFile = function (id_file, id_dir_to)
         // função que será chamada ao receber os dados.
         function (data) {
             mf.getFiles(id_dir_to);
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.getComments = function (version)
+{
+    var values = {'id':version.codigo};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_VERSION_COMMENTS, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            version.comments = data.comments;
+            if (mf.callback)
+                mf.callback(data, NANUVEM.TYPE_VERSION_COMMENTS, version);
         }
     );
 }

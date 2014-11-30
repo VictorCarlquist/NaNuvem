@@ -36,7 +36,6 @@ class Directory_manager extends CI_Controller
         $this->load->model('Directory_model', 'Directory');
 
         $cod_file = $this->input->post('id');
-        $cod_file = 1;
         $this->Directory->delete_file($cod_file);
     }
 
@@ -47,6 +46,16 @@ class Directory_manager extends CI_Controller
         $cod_file = $this->input->post('id');
         $to_cod_dir = $this->input->post('to');
         $this->Directory->move_file($cod_file, $to_cod_dir);
+    }
+
+    public function get_comments()
+    {
+        $this->load->model('Directory_model', 'Directory');
+
+        $cod_version = $this->input->post('id');
+        $result = $this->Directory->get_comments($cod_version);
+
+        echo '{"comments":'.json_encode($result).'}';
     }
 
 }

@@ -42,4 +42,11 @@ class Directory_model extends CI_Model {
         $this->db->where('codigo', $cod_arq);
         $this->db->update('arquivos', $data);
     }
+
+    public function get_comments($cod_versao)
+    {
+        $where = array('codigo_versao' => $cod_versao);
+        $query = $this->db->get_where('comentarios', $where);
+        return $query->result();
+    }
 }
