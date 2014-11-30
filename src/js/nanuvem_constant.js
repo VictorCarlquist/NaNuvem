@@ -30,7 +30,13 @@ NANUVEM.URL_DELETE_FILE = NANUVEM.BASE_URL + "/directory_manager/delete_file";
 * @constant 
 * @description Armazena a url para enviar e receber dados para renomear o arquivo
 */
-NANUVEM.URL_RENAME = "index.php/XXXXXXX";
+NANUVEM.URL_RENAME_FILE = NANUVEM.BASE_URL+ "/directory_manager/rename_file";
+
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados para renomear um diretório
+*/
+NANUVEM.URL_RENAME_DIR = NANUVEM.BASE_URL+ "/directory_manager/rename_dir";
 
 /**
 * @constant 

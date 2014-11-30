@@ -2,14 +2,6 @@
 
 class Directory_manager extends CI_Controller 
 {   
-    public function get_directories()
-    {
-        $this->load->model('Directory_model', 'Directory');
-
-        //TODO : pegar o código do cliente na sessão
-        $result = $this->Directory->get_directories(1);
-        echo '{"dirs":'.json_encode($result).'}';
-    }
 
     public function get_files()
     {
@@ -67,4 +59,21 @@ class Directory_manager extends CI_Controller
         echo '{"comments":'.json_encode($result).'}';
     }
 
+    public function get_directories()
+    {
+        $this->load->model('Directory_model', 'Directory');
+
+        //TODO : pegar o código do cliente na sessão
+        $result = $this->Directory->get_directories(1);
+        echo '{"dirs":'.json_encode($result).'}';
+    }
+
+    public function rename_dir()
+    {
+        $this->load->model('Directory_model', 'Directory');
+
+        $cod_dir = $this->input->post('id');
+        $new_name = $this->input->post('name');
+        $this->Directory->rename_dir($cod_dir, $new_name);
+    }
 }

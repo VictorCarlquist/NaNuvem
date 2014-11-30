@@ -172,4 +172,31 @@ NANUVEM.DirectoryManager.prototype.getComments = function (version)
     );
 }
 
+NANUVEM.DirectoryManager.prototype.renameFile = function (file, newName)
+{
+    var values = {'id':file.codigo, 'name': newName};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_RENAME_FILE, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getFiles(file.codigo_diretorio);
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.renameDir = function (dir, newName)
+{
+    var values = {'id':dir.codigo, 'name': newName};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_RENAME_DIR, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getDirs();
+        }
+    );
+}
+
+
 })(NANUVEM);

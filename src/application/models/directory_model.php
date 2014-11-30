@@ -2,13 +2,9 @@
 
 class Directory_model extends CI_Model {
 
-    public function get_directories($cod_cliente)
-    {
-        $where = array('codCliente' => $cod_cliente);
-        $query = $this->db->get_where('listDirsFromClients', $where);
-        return $query->result();
-    }
-
+    /*
+    * Files
+    */ 
     public function get_files($cod_diretorio)
     {
         $where = array('codigo_diretorio' => $cod_diretorio);
@@ -55,5 +51,22 @@ class Directory_model extends CI_Model {
         $where = array('codigo_versao' => $cod_versao);
         $query = $this->db->get_where('comentarios', $where);
         return $query->result();
+    }
+
+    /*
+    * Directory
+    */
+    public function get_directories($cod_cliente)
+    {
+        $where = array('codCliente' => $cod_cliente);
+        $query = $this->db->get_where('listDirsFromClients', $where);
+        return $query->result();
+    }
+
+    public function rename_dir($cod_dir, $new_name)
+    {
+        $data = array('nome' => $new_name);
+        $this->db->where('codigo', $cod_dir);
+        $this->db->update('diretorios', $data);
     }
 }
