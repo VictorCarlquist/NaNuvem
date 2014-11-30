@@ -43,6 +43,13 @@ class Directory_model extends CI_Model {
         $this->db->update('arquivos', $data);
     }
 
+    public function rename_file($cod_arq, $new_name)
+    {
+        $data = array('nome' => $new_name);
+        $this->db->where('codigo', $cod_arq);
+        $this->db->update('arquivos', $data);
+    }
+
     public function get_comments($cod_versao)
     {
         $where = array('codigo_versao' => $cod_versao);

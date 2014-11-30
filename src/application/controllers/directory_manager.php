@@ -48,12 +48,21 @@ class Directory_manager extends CI_Controller
         $this->Directory->move_file($cod_file, $to_cod_dir);
     }
 
+    public function rename_file()
+    {
+        $this->load->model('Directory_model', 'Directory');
+
+        $cod_file = $this->input->post('id');
+        $new_name = $this->input->post('name');
+        $this->Directory->rename_file($cod_file, $new_name);
+    }
+
     public function get_comments()
     {
         $this->load->model('Directory_model', 'Directory');
 
         $cod_version = $this->input->post('id');
-        $result = $this->Directory->get_comments($cod_version);
+        $result = $this->Directory->get_comments($cod_version = 1);
 
         echo '{"comments":'.json_encode($result).'}';
     }

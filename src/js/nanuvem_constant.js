@@ -16,12 +16,6 @@ NANUVEM.URL_VERSION_COMMENTS = NANUVEM.BASE_URL + "/directory_manager/get_commen
 
 /**
 * @constant 
-* @description Armazena a url para enviar e receber dados sobre as informações do arquivo
-*/
-NANUVEM.URL_INFO = "ajax_file_info.txt";
-
-/**
-* @constant 
 * @description Armazena a url para enviar e receber dados para mover o arquivo
 */
 NANUVEM.URL_MOVE_FILE = NANUVEM.BASE_URL + "/directory_manager/move_file";
@@ -46,10 +40,14 @@ NANUVEM.URL_VERSION_ADDCOMMENT = "index.php/XXXXXXX";
 
 /**
 * @constant 
-* @description Armazena a url para enviar e receber dados sobre a versão do arquivo
+* @description Armazena a url para enviar e receber dados todos os diretórios
 */
 NANUVEM.URL_LOAD_DIR = NANUVEM.BASE_URL + "/directory_manager/get_directories";
 
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados sobre os arquivos em um diretório
+*/
 NANUVEM.URL_LOAD_FILES = NANUVEM.BASE_URL + "/directory_manager/get_files";
 
 NANUVEM.TYPE_DIRECTORY = 0;

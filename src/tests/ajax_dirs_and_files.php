@@ -49,7 +49,7 @@
                 printDir(dir.dirs[i], i, tab+1);
         }
         var DM = new NANUVEM.DirectoryManager(
-                function (data, type) {
+                function (data, type, obj) {
                     // Este if apenas será chamado na primeira vez que o site 
                     // for carredo. Ele irá carregar todos os diretórios, sem
                     // os arquivos, para criar a "arvore de diretórios".
@@ -101,6 +101,32 @@
                         document.getElementById("text2").innerHTML +=
                         "<a href='javascript:getVersions("+file.codigo+","+ file.codigo_diretorio+");'>" + file.nome + "</a>";
                         
+                    }
+                    // Quando este if for verdadeiro, o parametro |obj| será o 
+                    // arquivo que recebeu as versões
+                    if (type == NANUVEM.TYPE_VERSIONS) {
+                        // Campos do versions []
+                        //"codigo":"1",
+                        // "codigo_arquivo":"1",
+                        // "situacao":"0",
+                        // "data_hora":"2015-11-20 00:00:00",
+                        // "tamanho":"2000",
+                        // "codigo_cliente":"1",
+                        // "codigo_diretorio":"1",
+                        // "nome":"arquivo 01",
+                        // "extensao":"txt"}
+                        alert(obj.versions[0].tamanho);
+                    }
+
+                    // Quando este if for verdadeiro, o parametro |obj| será 
+                    // a versão com os comentários preenchidos
+                    if (type == NANUVEM.TYPE_VERSION_COMMENTS) {
+                        // Campos do comments []
+                        // "codigo":"1",
+                        // "codigo_versao":"1",
+                        // "texto":"Coment\u00e1rio 01",
+                        // "data_hora":"2014-11-20 00:00:00"
+                        alert(obj.comments[0].texto);
                     }
                     
                 }, 0
