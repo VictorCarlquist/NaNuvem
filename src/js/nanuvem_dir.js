@@ -114,6 +114,19 @@ NANUVEM.DirectoryManager.prototype.deleteFile = function (id_file, id_dir)
     );
 }
 
+NANUVEM.DirectoryManager.prototype.deleteVersion = function (id_version)
+{
+    var values = {'id':id_version};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_DELETE_VERSION, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getFiles(id_dir);
+        }
+    );
+}
+
 NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
 {
     var values = {'id':id_file};

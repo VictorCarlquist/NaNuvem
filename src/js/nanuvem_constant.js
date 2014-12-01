@@ -28,6 +28,12 @@ NANUVEM.URL_DELETE_FILE = NANUVEM.BASE_URL + "/directory_manager/delete_file";
 
 /**
 * @constant 
+* @description Armazena a url para enviar e receber dados para deletar uma versao
+*/
+NANUVEM.URL_DELETE_VERSION = NANUVEM.BASE_URL + "/directory_manager/delete_version";
+
+/**
+* @constant 
 * @description Armazena a url para enviar e receber dados para renomear o arquivo
 */
 NANUVEM.URL_RENAME_FILE = NANUVEM.BASE_URL+ "/directory_manager/rename_file";

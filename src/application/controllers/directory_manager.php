@@ -23,6 +23,14 @@ class Directory_manager extends CI_Controller
         echo '{"versions":'.json_encode($result).'}';
     }
 
+    public function delete_version()
+    {
+        $this->load->model('Directory_model', 'Directory');
+
+        $cod_version = $this->input->post('id');
+        $this->Directory->delete_version($cod_version);
+    }
+
     public function delete_file()
     {
         $this->load->model('Directory_model', 'Directory');

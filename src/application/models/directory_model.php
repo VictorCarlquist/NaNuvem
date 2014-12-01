@@ -22,6 +22,12 @@ class Directory_model extends CI_Model {
         return $query->result();
     }
 
+    public function delete_file($cod_version)
+    {
+        $this->db->delete('comentarios', array('codigo_versao' => $cod_version);
+        $this->db->delete('versoes', array('codigo' => $cod_version);      
+    }
+
     public function delete_file($cod_arq)
     {
         $this->db->query('DELETE FROM comentarios WHERE codigo_versao IN (
