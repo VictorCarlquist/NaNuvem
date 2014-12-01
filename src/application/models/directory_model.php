@@ -18,9 +18,13 @@ class Directory_model extends CI_Model {
 
     public function delete_file($cod_arq)
     {
-        // TODO : Consertar isso!
-        $this->db->delete('versoes', array('codigo_arquivo' => $cod));
-        $this->db->delete('arquivos', array('codigo' => $cod)); 
+        $this->db->query('DELETE FROM comentarios WHERE codigo_versao IN (
+            SELECT codigo FROM (SELECT * FROM versoes WHERE codigo_arquivo = '.$cod_arq.') as a)');
+        $this->db->query('DELETE FROM versoes WHERE codigo IN ( 
+            SELECT codigo FROM (SELECT * FROM versoes WHERE codigo_arquivo = '.$cod_arq.') as v)');
+        $this->db->delete('tags_arquivos', array('codigo_arquivo' => $cod_arq)); 
+        $this->db->delete('compartilhamento_arquivo', array('codigo_arquivo' => $cod_arq)); 
+        $this->db->delete('arquivos', array('codigo' => $cod_arq));
     }
 
     public function get_versions($cod_arq)

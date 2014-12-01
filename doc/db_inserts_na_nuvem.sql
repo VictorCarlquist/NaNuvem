@@ -706,4 +706,4 @@ create view listDirsFromClients as
 select c.codigo as 'id_client', d.codigo as 'id', d.diretorio_pai as 'id_father', d.nome as 'name' from 
   diretorios d inner join clientes c on d.codigo_cliente=c.codigo order by d.diretorio_pai;
 
-select * from listDirsFromClients where codCliente=1;
+select * from listDirsFromClients where id_client=1;
