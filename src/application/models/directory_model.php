@@ -7,11 +7,17 @@ class Directory_model extends CI_Model {
     */ 
     public function get_files($cod_diretorio)
     {
+        // select nome as name, codigo as id, (select tamanho from 
+        //versoes v where codigo_arquivo=arquivos.codigo order 
+        // by data_hora asc limit 1) as size from arquivos;
         $where = array('codigo_diretorio' => $cod_diretorio);
         $this->db->select("codigo as id");
         $this->db->select("codigo_diretorio as id_dir");
         $this->db->select("nome as name");
         $this->db->select("extensao as ext");
+        $this->db->select("(SELECT tamanho FROM 
+        versoes v WHERE codigo_arquivo=arquivos.codigo ORDER 
+        BY data_hora ASC limit 1) AS size");
         $query = $this->db->get_where('arquivos', $where);
         return $query->result();
     }

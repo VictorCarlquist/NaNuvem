@@ -619,26 +619,86 @@ select * from tags_arquivos;
  Versões
 */
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 1);
+  values (1, 0, '2015-11-20', 1000, 1);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
   values (1, 0, '2015-11-20', 2000, 1);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 3);
+  values (1, 0, '2015-11-20', 3000, 3);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 3);
+  values (1, 0, '2015-11-20', 4000, 3);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 5);
+  values (1, 0, '2015-11-20', 5000, 5);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 5);
+  values (1, 0, '2015-11-20', 6000, 5);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 7);
+  values (1, 0, '2015-11-20', 7000, 7);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 7);
+  values (1, 0, '2015-11-20', 8000, 7);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 9);
+  values (1, 0, '2015-11-20', 9000, 9);
 insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
-  values (1, 0, '2015-11-20', 2000, 9);
-    
+  values (1, 0, '2015-11-20', 10, 9);
+
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (2, 0, '2015-11-20', 1110, 1);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (3, 0, '2015-11-20', 2210, 1);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (4, 0, '2015-11-20', 3310, 3);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (5, 0, '2015-11-20', 4420, 3);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (6, 0, '2015-11-20', 5550, 5);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (7, 0, '2015-11-20', 6670, 5);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (8, 0, '2015-11-20', 7730, 7);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (9, 0, '2015-11-20', 8810, 7);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (10, 0, '2015-11-20', 9920, 9);
+
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (11, 0, '2015-11-20', 1101, 1);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (12, 0, '2015-11-20', 2201, 1);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (13, 0, '2015-11-20', 3301, 3);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (14, 0, '2015-11-20', 4401, 3);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (15, 0, '2015-11-20', 5506, 5);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (16, 0, '2015-11-20', 6607, 5);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (17, 0, '2015-11-20', 7705, 7);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (18, 0, '2015-11-20', 8807, 7);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (19, 0, '2015-11-20', 9900, 9);
+
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (20, 0, '2015-11-20', 1100, 1);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (21, 0, '2015-11-20', 2200, 1);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (22, 0, '2015-11-20', 3300, 3);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (23, 0, '2015-11-20', 4400, 3);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (24, 0, '2015-11-20', 5500, 5);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (25, 0, '2015-11-20', 6600, 5);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (26, 0, '2015-11-20', 7700, 7);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (27, 0, '2015-11-20', 8800, 7);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (28, 0, '2015-11-20', 9900, 9);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (29, 0, '2015-11-20', 9900, 9);
+insert into versoes (codigo_arquivo, situacao, data_hora, tamanho, codigo_cliente)
+  values (30, 0, '2015-11-20', 9900, 9);    
 select * from versoes;
 
 /*
