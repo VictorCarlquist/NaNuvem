@@ -88,6 +88,7 @@
                         // id_dir:2
                         // name:"nome"
                         // ext:"txt"
+                        // size: 1100
                         var file = DM.dirs[0].dirs[0].files[0];
                         document.getElementById("text2").innerHTML =
                         "<a href='javascript:deleteFile("+file.id+","+ file.id_dir+");'>" + file.name + "</a> <br>";
