@@ -1,34 +1,55 @@
 (function (NANUVEM){ // "namespace"
 
+NANUVEM.BASE_URL = "http://localhost/nanuvem/index.php";
+
 /**
 * @constant 
 * @description Armazena a url para enviar e receber dados sobre a versão do arquivo
 */
-NANUVEM.URL_VERSION = "index.php/XXXXXXX";
+NANUVEM.URL_VERSIONS = NANUVEM.BASE_URL + "/directory_manager/get_versions";
 
 /**
 * @constant 
-* @description Armazena a url para enviar e receber dados sobre as informações do arquivo
+* @description Armazena a url para enviar e receber dados sobre a versão do arquivo
 */
-NANUVEM.URL_INFO = "ajax_file_info.txt";
+NANUVEM.URL_VERSION_COMMENTS = NANUVEM.BASE_URL + "/directory_manager/get_comments";
 
 /**
 * @constant 
 * @description Armazena a url para enviar e receber dados para mover o arquivo
 */
-NANUVEM.URL_MOVE = "index.php/XXXXXXX";
+NANUVEM.URL_MOVE_FILE = NANUVEM.BASE_URL + "/directory_manager/move_file";
 
 /**
 * @constant 
 * @description Armazena a url para enviar e receber dados para deletar o arquivo
 */
-NANUVEM.URL_DELETE = "index.php/XXXXXXX";
+NANUVEM.URL_DELETE_FILE = NANUVEM.BASE_URL + "/directory_manager/delete_file";
+
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados para deletar uma versao
+*/
+NANUVEM.URL_DELETE_VERSION = NANUVEM.BASE_URL + "/directory_manager/delete_version";
+
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados para deletar um comentário
+*/
+NANUVEM.URL_DELETE_COMMENT = NANUVEM.BASE_URL + "/directory_manager/delete_comment";
+
 
 /**
 * @constant 
 * @description Armazena a url para enviar e receber dados para renomear o arquivo
 */
-NANUVEM.URL_RENAME = "index.php/XXXXXXX";
+NANUVEM.URL_RENAME_FILE = NANUVEM.BASE_URL+ "/directory_manager/rename_file";
+
+/**
+* @constant 
+* @description Armazena a url para enviar e receber dados para renomear um diretório
+*/
+NANUVEM.URL_RENAME_DIR = NANUVEM.BASE_URL+ "/directory_manager/rename_dir";
 
 /**
 * @constant 
@@ -38,14 +59,19 @@ NANUVEM.URL_VERSION_ADDCOMMENT = "index.php/XXXXXXX";
 
 /**
 * @constant 
-* @description Armazena a url para enviar e receber dados para receber todos os dados de uma versao
+* @description Armazena a url para enviar e receber dados todos os diretórios
 */
-NANUVEM.URL_VERSION_CONSTRUCTOR = "index.php/XXXXXXX";
+NANUVEM.URL_LOAD_DIR = NANUVEM.BASE_URL + "/directory_manager/get_directories";
 
 /**
 * @constant 
-* @description Armazena a url para enviar e receber dados sobre a versão do arquivo
+* @description Armazena a url para enviar e receber dados sobre os arquivos em um diretório
 */
-NANUVEM.URL_LOAD_DIR = "ajax_dirs_and_files.txt";
+NANUVEM.URL_LOAD_FILES = NANUVEM.BASE_URL + "/directory_manager/get_files";
+
+NANUVEM.TYPE_DIRECTORY = 0;
+NANUVEM.TYPE_FILE = 1;
+NANUVEM.TYPE_VERSIONS = 2;
+NANUVEM.TYPE_VERSIONS_COMMENTS = 3;
 
 })(NANUVEM);

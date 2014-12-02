@@ -10,18 +10,10 @@ if (typeof(NANUVEM) == "undefined") {
 */
 NANUVEM.DirectoryManager = function (fun, id_dir) 
 {
-    // |info (object)| será um objeto gerado via JSON, ele armazenará todas as 
-    // informações relacionadas com o arquivo
-    // Provavelmente ele possuirá os seguintes atributos:
-    //	- name string
-    //	- owner id_usuario
-    //	- size int (em bytes?)
-    //	- absolutePath string (/dir1/dir2)
-    //	- permission int (talvez?)
     this.currentPath = "/";
     this.files = [];
     this.dirs = [];
-    this.selected = false;
+
     // private
     this.callback = fun;
     this.id = id_dir;
@@ -30,7 +22,7 @@ NANUVEM.DirectoryManager = function (fun, id_dir)
 
 NANUVEM.DirectoryManager.prototype._init = function (id_dir)
 {
-    this.getDirAndFiles(id_dir);
+    this.getDirs(id_dir);
 }
 
 /**
@@ -39,30 +31,188 @@ NANUVEM.DirectoryManager.prototype._init = function (id_dir)
 */
 NANUVEM.DirectoryManager.prototype.changeDirectory = function (id_dir)
 {
-    this.getDirAndFiles(id_dir);
+    this.getFiles(id_dir);
+    //this.callback();
 }
 
 /**
-* Pega os diretorio e os arquivos dentro do diretorio especificado pelo id_dir
-* @param {int} id_dir Caminho que o ajax deve buscar os arquivos e diretórios
+* Pega os diretorios
 * @private
 */
-NANUVEM.DirectoryManager.prototype.getDirAndFiles = function (id_dir)
+NANUVEM.DirectoryManager.prototype.getDirs = function ()
 {
-    if (id_dir == null)
-        id_dir = 0;
-    var values = {id_dir: id_dir};
+    var values = {};
     var mf = this;
+
     NANUVEM.sendData(NANUVEM.URL_LOAD_DIR, values, 
         // função que será chamada ao receber os dados.
         function (data) {
-            mf.files = data.files;
-            mf.currentPath = data.currentPath;
-            mf.dirs = data.dirs;
+            for (var i = 0; i < data.dirs.length; i++) {
+                data.dirs[i].dirs = [];
+                for (var j = 0; j < data.dirs.length; j++) {
+                    if (data.dirs[i].id == data.dirs[j].id_father) {
+                        data.dirs[i].dirs.push(data.dirs[j]);
+                    }
+                }
+            }
+            mf.dirs = data.dirs; 
+            //mf.dirs.splice(1);
             if (mf.callback)
-                mf.callback(data);
+                mf.callback(data, NANUVEM.TYPE_DIRECTORY);
         }
     );
 }
+
+/**
+* Solicita os arquivos que estão dentro de um diretório
+* @param {int} id_dir ID do diretório que deve ser carregado os arquivos
+*/
+NANUVEM.DirectoryManager.prototype.getFiles = function (id_dir)
+{
+    var values = {'id':id_dir};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_LOAD_FILES, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+
+            for (var i = 0; i < mf.dirs.length; i++) {
+                if (mf.dirs[i].id == id_dir) {
+                    mf.dirs[i].files = data.files;
+                    break;
+                }
+            }
+            if (mf.callback)
+                mf.callback(data, NANUVEM.TYPE_FILE);
+        }
+    );
+}
+
+/**
+* Deleta o arquivos especificado
+* @param {int} id_file ID do arquivo  que será deletado
+* @param {int} id_dir ID do diretório que o arquivo que será deletado está
+*/
+NANUVEM.DirectoryManager.prototype.deleteFile = function (id_file, id_dir)
+{
+    var values = {'id':id_file};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_DELETE_FILE, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getFiles(id_dir);
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.deleteVersion = function (id_version)
+{
+    var values = {'id':id_version};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_DELETE_VERSION, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.deleteComment = function (id_comment)
+{
+    var values = {'id':id_comment};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_DELETE_COMMENT, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
+{
+    var values = {'id':id_file};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_VERSIONS, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            var dir;
+            var file;
+            for (var i = 0; i < mf.dirs.length; i++) {
+                if (mf.dirs[i].id == id_dir) {
+                    dir = mf.dirs[i];
+                    break;
+                }
+            }
+            for (var i = 0; i < dir.files.length; i++) {
+                if (dir.files[i].id == id_file) {
+                    dir.files[i].versions = data.versions;
+                    file = dir.files[i];
+                    break;
+                }
+            }
+            if (mf.callback)
+                mf.callback(data, NANUVEM.TYPE_VERSIONS, file);
+        }
+    );
+}
+
+
+NANUVEM.DirectoryManager.prototype.moveFile = function (id_file, id_dir_to)
+{
+    var values = {'id':id_file, 'to':id_dir_to};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_MOVE_FILE, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getFiles(id_dir_to);
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.getComments = function (version)
+{
+    var values = {'id':version.codigo};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_VERSION_COMMENTS, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            version.comments = data.comments;
+            if (mf.callback)
+                mf.callback(data, NANUVEM.TYPE_VERSION_COMMENTS, version);
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.renameFile = function (file, newName)
+{
+    var values = {'id':file.codigo, 'name': newName};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_RENAME_FILE, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getFiles(file.codigo_diretorio);
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.renameDir = function (dir, newName)
+{
+    var values = {'id':dir.codigo, 'name': newName};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_RENAME_DIR, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
+            mf.getDirs();
+        }
+    );
+}
+
 
 })(NANUVEM);

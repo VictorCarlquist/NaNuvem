@@ -41,8 +41,8 @@ NANUVEM.sendData = function(url, values, funSuccess)
     $.ajax({
         url : url,
         dataType : "json",
-        type: "get",
-        data: "test",
+        type: "post",
+        data: values,
         success : funSuccess,
         error: function(a, b, c) {
             console.log(b +" SendData: " + " " + a +" "+ c);
