@@ -8,7 +8,7 @@ class Directory_manager extends CI_Controller
         $this->load->model('Directory_model', 'Directory');
 
         $cod_dir = $this->input->post('id');
-        $result = $this->Directory->get_files($cod_dir);
+        $result = $this->Directory->get_files($cod_dir =1);
 
         echo '{"files":'.json_encode($result).'}';
     }

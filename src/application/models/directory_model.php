@@ -18,6 +18,10 @@ class Directory_model extends CI_Model {
         $this->db->select("(SELECT tamanho FROM 
         versoes v WHERE codigo_arquivo=arquivos.codigo ORDER 
         BY data_hora ASC limit 1) AS size");
+        $this->db->select("(SELECT date(data_hora) FROM 
+        versoes v WHERE codigo_arquivo=arquivos.codigo ORDER 
+        BY data_hora ASC limit 1) AS date_time");        
+
         $query = $this->db->get_where('arquivos', $where);
         return $query->result();
     }

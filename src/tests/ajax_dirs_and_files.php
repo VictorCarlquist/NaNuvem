@@ -89,6 +89,7 @@
                         // id_dir:2
                         // name:"nome"
                         // ext:"txt"
+                        // date_time: "2015-11-20 00:00:00" 
                         // size: 1100
                         var file = DM.dirs[0].dirs[0].files[0];
                         
