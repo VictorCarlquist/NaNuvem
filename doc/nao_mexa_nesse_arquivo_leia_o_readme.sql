@@ -704,26 +704,26 @@ select * from versoes;
 /*
   Comentários
 */
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (1, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (2, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (3, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (4, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (5, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (6, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (7, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (8, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (9, 'Comentário 01', '2014-11-20');
-insert into comentarios (codigo_versao, texto, data_hora) 
-  values (10, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (1, 1, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (2, 1, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (3, 2, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (4, 2, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (5, 3, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (6, 3, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (7, 3, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (8, 4, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (9, 5, 'Comentário 01', '2014-11-20');
+insert into comentarios (codigo_versao, codigo_cliente, texto, data_hora) 
+  values (10, 6, 'Comentário 01', '2014-11-20');
     
 select * from comentarios;
   
@@ -731,39 +731,61 @@ select * from comentarios;
 * Administradores
 ********************************************************************************/
 
-insert into funcao (nome) values ('Editar');
-insert into funcao (nome) values ('Ler');
-insert into funcao (nome) values ('Excluir');
-insert into funcao (nome) values ('Deus');
-insert into funcao (nome) values ('Configurar');
-insert into funcao (nome) values ('Mesclar');
-insert into funcao (nome) values ('Induzir');
-insert into funcao (nome) values ('Controlar');
-insert into funcao (nome) values ('Memorizar');
-insert into funcao (nome) values ('Fuçar');
+insert into funcoes (nome) values ('Editar');
+insert into funcoes (nome) values ('Ler');
+insert into funcoes (nome) values ('Excluir');
+insert into funcoes (nome) values ('Deus');
+insert into funcoes (nome) values ('Configurar');
+insert into funcoes (nome) values ('Mesclar');
+insert into funcoes (nome) values ('Induzir');
+insert into funcoes (nome) values ('Controlar');
+insert into funcoes (nome) values ('Memorizar');
+insert into funcoes (nome) values ('Fuçar');
 
-insert into grupo (nome) values ('Andorinhas');
-insert into grupo (nome) values ('Papagaios');
-insert into grupo (nome) values ('Elefantes');
-insert into grupo (nome) values ('Micos Leões Dourados');
-insert into grupo (nome) values ('Ursos Pandas');
-insert into grupo (nome) values ('Pelicanos');
-insert into grupo (nome) values ('Loiras');
-insert into grupo (nome) values ('Morenas');
-insert into grupo (nome) values ('Ruivas');
-insert into grupo (nome) values ('Latinas');
+insert into grupos (nome) values ('Andorinhas');
+insert into grupos (nome) values ('Papagaios');
+insert into grupos (nome) values ('Elefantes');
+insert into grupos (nome) values ('Micos Leões Dourados');
+insert into grupos (nome) values ('Ursos Pandas');
+insert into grupos (nome) values ('Pelicanos');
+insert into grupos (nome) values ('Loiras');
+insert into grupos (nome) values ('Morenas');
+insert into grupos (nome) values ('Ruivas');
+insert into grupos (nome) values ('Latinas');
+
+insert into usuarios (nome, email, senha, grupo_codigo) values ('Marcelo','marcelo_adm@gmail.com','123', 1);
+insert into usuarios (nome, email, senha, grupo_codigo) values ('Rodrigo','rodrigo_adm@gmail.com','123', 2);
+insert into usuarios (nome, email, senha, grupo_codigo) values ('Carlos','carlinho@gmail.com','123', 2);	
+insert into usuarios (nome, email, senha, grupo_codigo) values ('Stefano','tefinho@gmail.com','123', 3);
+insert into usuarios (nome, email, senha, grupo_codigo) values ('Antonio','toninho@gmail.com','123', 3);	
+
+insert into funcoes (nome) values ('Presidente');
+insert into funcoes (nome) values ('Diretor');
+insert into funcoes (nome) values ('Gerente');
+
+insert into permissoes (funcao_codigo, grupo_codigo) values (1,1);
+insert into permissoes (funcao_codigo, grupo_codigo) values (2,2);
+insert into permissoes (funcao_codigo, grupo_codigo) values (3,3);
+
+insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (1, 1, '2013-12-31 21:49:59');
+insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (2, 2, '2013-11-31 23:59:59');
+insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (3, 2, '2013-10-30 23:09:59');
+insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (4, 3, '2014-10-30 21:10:59');
+insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (5, 3, '2014-10-30 03:59:59');
+insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (6, 4, '2014-10-20 23:00:15');
+insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (7, 5, '2014-10-20 23:35:59');
 
 /*******************************************************************************
  * Views
  *******************************************************************************/
-select * from versoes inner join arquivos on versoes.codigo_arquivo=arquivos.codigo where codigo_cliente=1;
+#select * from versoes inner join arquivos on versoes.codigo_arquivo=arquivos.codigo where codigo_cliente=1;
 
-select * from arquivos a where a.codigo = 1;
-select codigo_arquivo, tamanho, data_hora from versoes v where codigo_arquivo=1 order by data_hora asc limit 1;
+#select * from arquivos a where a.codigo = 1;
+#select codigo_arquivo, tamanho, data_hora from versoes v where codigo_arquivo=1 order by data_hora asc limit 1;
 
-drop view listDirsFromClients;
-create view listDirsFromClients as
-select c.codigo as 'id_client', d.codigo as 'id', d.diretorio_pai as 'id_father', d.nome as 'name' from 
-  diretorios d inner join clientes c on d.codigo_cliente=c.codigo order by d.diretorio_pai;
+#drop view listDirsFromClients;
+#create view listDirsFromClients as
+#select c.codigo as 'id_client', d.codigo as 'id', d.diretorio_pai as 'id_father', d.nome as 'name' from 
+#  diretorios d inner join clientes c on d.codigo_cliente=c.codigo order by d.diretorio_pai;
 
-select * from listDirsFromClients where id_client=1;
+#select * from listDirsFromClients where id_client=1;
