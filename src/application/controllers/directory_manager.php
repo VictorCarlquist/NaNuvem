@@ -8,7 +8,7 @@ class Directory_manager extends CI_Controller
         $this->load->model('Directory_model', 'Directory');
 
         $cod_dir = $this->input->post('id');
-        $result = $this->Directory->get_files($cod_dir = 1);
+        $result = $this->Directory->get_files($cod_dir);
 
         echo '{"files":'.json_encode($result).'}';
     }
@@ -29,6 +29,7 @@ class Directory_manager extends CI_Controller
 
         $cod_version = $this->input->post('id');
         $this->Directory->delete_version($cod_version);
+        echo '{}';
     }
 
     public function delete_file()
@@ -37,6 +38,16 @@ class Directory_manager extends CI_Controller
 
         $cod_file = $this->input->post('id');
         $this->Directory->delete_file($cod_file);
+        echo '{}';
+    }
+
+    public function delete_comment()
+    {
+        $this->load->model('Directory_model', 'Directory');
+
+        $cod_comment = $this->input->post('id');
+        $this->Directory->delete_comment($cod_comment);
+        echo '{}';
     }
 
     public function move_file()
@@ -46,6 +57,7 @@ class Directory_manager extends CI_Controller
         $cod_file = $this->input->post('id');
         $to_cod_dir = $this->input->post('to');
         $this->Directory->move_file($cod_file, $to_cod_dir);
+        echo '{}';
     }
 
     public function rename_file()
@@ -55,6 +67,7 @@ class Directory_manager extends CI_Controller
         $cod_file = $this->input->post('id');
         $new_name = $this->input->post('name');
         $this->Directory->rename_file($cod_file, $new_name);
+        echo '{}';
     }
 
     public function get_comments()
@@ -83,5 +96,6 @@ class Directory_manager extends CI_Controller
         $cod_dir = $this->input->post('id');
         $new_name = $this->input->post('name');
         $this->Directory->rename_dir($cod_dir, $new_name);
+        echo '{}';
     }
 }

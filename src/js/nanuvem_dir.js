@@ -10,18 +10,10 @@ if (typeof(NANUVEM) == "undefined") {
 */
 NANUVEM.DirectoryManager = function (fun, id_dir) 
 {
-    // |info (object)| será um objeto gerado via JSON, ele armazenará todas as 
-    // informações relacionadas com o arquivo
-    // Provavelmente ele possuirá os seguintes atributos:
-    //	- name string
-    //	- owner id_usuario
-    //	- size int (em bytes?)
-    //	- absolutePath string (/dir1/dir2)
-    //	- permission int (talvez?)
     this.currentPath = "/";
     this.files = [];
     this.dirs = [];
-    this.selected = false;
+
     // private
     this.callback = fun;
     this.id = id_dir;
@@ -122,7 +114,18 @@ NANUVEM.DirectoryManager.prototype.deleteVersion = function (id_version)
     NANUVEM.sendData(NANUVEM.URL_DELETE_VERSION, values, 
         // função que será chamada ao receber os dados.
         function (data) {
-            mf.getFiles(id_dir);
+        }
+    );
+}
+
+NANUVEM.DirectoryManager.prototype.deleteComment = function (id_comment)
+{
+    var values = {'id':id_comment};
+    var mf = this;
+
+    NANUVEM.sendData(NANUVEM.URL_DELETE_COMMENT, values, 
+        // função que será chamada ao receber os dados.
+        function (data) {
         }
     );
 }

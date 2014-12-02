@@ -83,6 +83,7 @@
                             return;
                         }
 
+                        document.getElementById("text2").innerHTML = "";
                         // Campos files[0]
                         // id :1
                         // id_dir:2
@@ -90,16 +91,20 @@
                         // ext:"txt"
                         // size: 1100
                         var file = DM.dirs[0].dirs[0].files[0];
-                        document.getElementById("text2").innerHTML =
-                        "<a href='javascript:deleteFile("+file.id+","+ file.id_dir+");'>" + file.name + "</a> <br>";
-
+                        
+                        // verifica se este arquivo existe ou se foi excluido
+                        // Se este arquivo fpi excluido, ele não poderá exibir o link abaixo.
+                        if (file) {
+                            document.getElementById("text2").innerHTML =
+                            "<a href='javascript:deleteFile("+file.id+","+ file.id_dir+");'>Exemplo: Excluir " + file.name + "</a> <br>";
+                        }   
                         if (!DM.dirs[0].files) {
                             DM.changeDirectory(DM.dirs[0].id);
                             return;
                         }
                         file = DM.dirs[0].files[0];
                         document.getElementById("text2").innerHTML +=
-                        "<a href='javascript:getVersions("+file.id+","+ file.id_dir+");'>" + file.name + "</a>";
+                        "<a href='javascript:getVersions("+file.id+","+ file.id_dir+");'>Exemplo: Pegar Versões " + file.name + "</a>";
                         
                     }
                     // Quando este if for verdadeiro, o parametro |obj| será o 
