@@ -73,32 +73,14 @@
 			<div class="col-md-12">
 				<h2>Planos</h2>
 				<div class="row">
+				<?php foreach ($planos as $plano): ?>
 					<div class="col-md-4">
 						<center><span style="font-size: 124px" class="glyphicon glyphicon-picture"></span></center>
-						<h3>Plano pobre</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dol</p>
+						<h3><?php echo $plano->nome ?></h3>
+						<p><?php echo $plano->descricao ?></p>
 					</div>
-
-					<div class="col-md-4">
-						<center><span style="font-size: 124px" class="glyphicon glyphicon-picture"></span></center>
-						<h3>Plano pobre</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dol</p>
-					</div>
-
-					<div class="col-md-4">
-						<center><span style="font-size: 124px" class="glyphicon glyphicon-picture"></span></center>
-						<h3>Plano pobre</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dol</p>
-					</div>
+				<?php endforeach ?>
+				
 				</div>
 			</div>
 

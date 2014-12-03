@@ -2,10 +2,19 @@
 
 class Page extends CI_Controller {
 	
+
+
 	public function index()
 	{
+        $this->output->enable_profiler(TRUE);
+
+        $this->load->model('plano_model', 'Planos');
+
+        $planos = $this->Planos->getAll();
+        $data = array('planos' => $planos);
+
 		$this->load->view('layout/header');
-		$this->load->view('home');
+		$this->load->view('home', $data);
 		$this->load->view('layout/footer');
 	}
 }
