@@ -5,7 +5,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'gaviao';
+$db['default']['password'] = 'root';
 $db['default']['database'] = 'na_nuvem';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
