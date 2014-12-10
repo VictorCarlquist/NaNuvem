@@ -34,10 +34,10 @@
 			</div>
 			<div class="col-md-12">
 				<hr>
-				<h2>Promoções</h2>
+				<h2>bonus</h2>
 				<div class="row">
 					<div class="col-md-3">
-						<h3>Pacote 1</h3>
+						<h3>Bonus 1</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -45,7 +45,7 @@
 					</div>
 
 					<div class="col-md-3">
-						<h3>Pacote 2</h3>
+						<h3>Bonus 2</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -53,7 +53,7 @@
 					</div>
 
 					<div class="col-md-3">
-						<h3>Pacote 3</h3>
+						<h3>Bonus 3</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -61,21 +61,7 @@
 					</div>
 					
 					<div class="col-md-3">
-						<h3>Pacote 4</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dol</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-12">
-				<hr>
-				<h2>Bonus</h2>
-				<div class="row">
-					<div class="col-md-12">
-						<center><span style="font-size: 124px" class="glyphicon glyphicon-picture"></span></center>
+						<h3>Bonus 4</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
