@@ -8,6 +8,11 @@
 
 class Page extends MY_Controller{
 	
+	public function __construct()
+   	{
+        parent::__construct(TRUE);
+   	}
+
 	public function index()
 	{
 		$this->Login();
@@ -21,7 +26,7 @@ class Page extends MY_Controller{
 		$this->load->helper("form");
 		$this->load->library("form_validation");
 
-		$this->form_validation->set_rules('email', 'E-mail', 'required');
+		$this->form_validation->set_rules('email', 'E-mail', 'required|valid_email');
 		$this->form_validation->set_rules('password', 'Senha', 'required|callback_checar_login['.$this->input->post("email").']');
 
 		if ($this->form_validation->run() == FALSE) {
