@@ -16,10 +16,6 @@
 	margin-right: 0.6em;
 }
 
-h1{
-
-}
-
 body{
 	background-color: skyblue;
 }
@@ -30,6 +26,12 @@ h1, h2, h3{
 
 #cabecario{
 	padding: 20px 0 20px 0;
+	background-image:url(../img/banner.png);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-color:#32a3cb;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 #cabecario h1{
 	color: black !important;
@@ -68,15 +70,46 @@ h1, h2, h3{
 	margin-right: 20px;
 }
 #cabecario .btn-success{
-	background-color: rgb(183, 192, 218);
-	border-color: white;
-	color: white !important;
+	background-color: rgba(255, 255, 255, 0.65);
+	border-color: royalblue;
+	color: royalblue !important;
+}
+#cabecario .btn-success:hover{
+	background-color: white;
 }
 
 #corpo{
-	border-radius: 5px;
+}
+#corpo>div{
+	border-radius: 13px;
 	border: solid 1px royalblue;
 	background-color: white;
+}
+
+#corpo h2{
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+#the-carousel{
+	width: 90%;
+	margin: auto;
+	padding: 20px;
+	background-color: #999;
+	background-image:url(../img/banner.png);
+	background-size: cover;
+}
+#the-carousel .carousel-control.left, #the-carousel .carousel-control.right{
+	color: black;
+}
+#the-carousel img{
+	width: 60%;
+	margin: auto;
+	display: block;
+}
+
+.persona{
+	margin-bottom: 20px;
 }
 
 #rodape{
@@ -106,6 +139,9 @@ h1, h2, h3{
 	}
 	#cabecario h1 {
 		height: 135px;
+	}
+	#the-carousel{
+	width: 100%;
 	}
 }
 
