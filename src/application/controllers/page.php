@@ -34,6 +34,10 @@ class Page extends MY_Controller{
 			
 			$data = array('titulo' => 'Home');
 
+			$this->load->model('plano_model', 'Plano');
+			$planos = $this->Plano->getAll();
+			$data['planos'] = $planos;
+
 			//Caso um usuário ja tenha efetuado login
 			if(isset($this->usuario)){
 				$data['usuario_logado'] =  $this->usuario;	
