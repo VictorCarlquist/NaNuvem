@@ -435,7 +435,7 @@ CREATE TABLE `planos` (
   `valor` double NOT NULL,
   `espaco` bigint(20) NOT NULL,
   `nome` varchar(45) NOT NULL,
-  `img` varchar(255) DEFAULT 'null',
+  `imagem` varchar(255) DEFAULT 'null',
   PRIMARY KEY (`codigo`),
   UNIQUE KEY `nome_UNIQUE` (`nome`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
