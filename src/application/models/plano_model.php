@@ -6,6 +6,7 @@ class Plano_model extends CI_Model {
     var $valor ='';
     var $espaco ='';
     var $nome ='';
+    var $imagem ='';
 
 
     public function search()
@@ -22,6 +23,8 @@ class Plano_model extends CI_Model {
             $where['espaco'] = $this->espaco;
         if ($this->nome)
             $where['nome'] = $this->nome;
+        if ($this->imagem)
+            $where['imagem'] = $this->imagem;
 
 
         
