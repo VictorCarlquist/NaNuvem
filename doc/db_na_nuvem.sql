@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: na_nuvem
 -- ------------------------------------------------------
--- Server version 10.0.15-MariaDB-log
+-- Server version	10.0.15-MariaDB-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
