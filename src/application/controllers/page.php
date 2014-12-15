@@ -38,6 +38,11 @@ class Page extends MY_Controller{
 			$planos = $this->Plano->getAll();
 			$data['planos'] = $planos;
 
+
+			$this->load->model('bonus_model', 'Bonus');
+			$bonuses = $this->Bonus->getAll();
+			$data['bonuses'] = $bonuses;
+
 			//Caso um usuário ja tenha efetuado login
 			if(isset($this->usuario)){
 				$data['usuario_logado'] =  $this->usuario;	
@@ -54,7 +59,6 @@ class Page extends MY_Controller{
 			$this->Usuario->senha = $this->input->post("senha");
 			$this->Usuario->email = $this->input->post("email");
 
-				
 			$newdata = array(
 	           'usuario' => $this->Usuario->get(),
 	           'logged_in' => TRUE

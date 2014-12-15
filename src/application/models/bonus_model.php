@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Plano_model extends CI_Model {
+class Bonus_model extends CI_Model {
     var $codigo = NULL;
     var $nome ='';
     var $quantidade_espaco  = NULL;
@@ -16,18 +16,22 @@ class Plano_model extends CI_Model {
  * $resultado = $this->Objeto->search();
  * 
 **/
+
+
     public function search()
     {
         $where = array();
 
         if ($this->codigo)
             $where['codigo'] = $this->codigo;
-        if ($this->descricao)
-            $where['nome'] = $this->nome;
         if ($this->nome)
-            $where['quantidade_espaco'] = $this->quantidade_espaco;
+            $where['nome'] = $this->nome;
+        if ($this->descricao)
+            $where['descricao'] = $this->descricao;
         if ($this->quantidade_espaco)
-            $where['senha'] = $this->senha;
+            $where['quantidade_espaco'] = $this->quantidade_espaco;
+        if ($this->imagem)
+            $where['imagem'] = $this->imagem;
         if ($this->codigo_acao)
             $where['codigo_acao'] = $this->codigo_acao;
 
@@ -78,23 +82,27 @@ class Plano_model extends CI_Model {
         $data = array(
             'codigo' => $this->codigo,
             'nome' => $this->nome,
+            'descricao' => $this->descricao,
             'quantidade_espaco' => $this->quantidade_espaco,
-            'codigo_acao' => $this->codigo_acao
+            'imagem' => $this->imagem,
+            'codigo_acao' => $this->codigo_acao,
         );
-
         $this->db->insert('bonus', $data);
     }
 
     public function update()
     {
         $data = array();
-
         if ($this->codigo)
             $data['codigo'] = $this->codigo;
         if ($this->nome)
             $data['nome'] = $this->nome;
+        if ($this->descricao)
+            $data['descricao'] = $this->descricao;
         if ($this->quantidade_espaco)
             $data['quantidade_espaco'] = $this->quantidade_espaco;
+        if ($this->imagem)
+            $data['imagem'] = $this->imagem;
         if ($this->codigo_acao)
             $data['codigo_acao'] = $this->codigo_acao;
 
@@ -110,12 +118,15 @@ class Plano_model extends CI_Model {
             $where['codigo'] = $this->codigo;
         if ($this->nome)
             $where['nome'] = $this->nome;
+        if ($this->descricao)
+            $where['descricao'] = $this->descricao;
         if ($this->quantidade_espaco)
             $where['quantidade_espaco'] = $this->quantidade_espaco;
+        if ($this->imagem)
+            $where['imagem'] = $this->imagem;
         if ($this->codigo_acao)
             $where['codigo_acao'] = $this->codigo_acao;
         
-
         $this->db->delete('bonus', $where); 
 
     }

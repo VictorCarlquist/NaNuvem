@@ -42,62 +42,20 @@
 							</ol>
 
 						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-6">
-									<img src="img/imagem-principal.png">
+							<?php $nBonus=1; ?>
+							<?php foreach ($bonuses as $bonus): ?>
+								
+								<div class="item <?php if($nBonus==1)echo 'active'; ?>">
+									<div class="col-sm-6">
+										<img src="<?php echo base_url('uploads/'.$plano->imagem); ?>">
+									</div>
+									<div class="col-sm-6">
+											<h3>Bonus <?php echo $nBonus.': '.$bonus->nome; ?></h3>
+											<p><?php echo $bonus->descricao ?></p>
+									</div>
 								</div>
-								<div class="col-sm-6">
-										<h3>Bonus 1</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<img src="img/imagem-principal.png">
-								</div>
-								<div class="col-sm-6">
-										<h3>Bonus 2</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<img src="img/imagem-principal.png">
-								</div>
-								<div class="col-sm-6">
-										<h3>Bonus 3</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<img src="img/imagem-principal.png">
-								</div>
-								<div class="col-sm-6">
-										<h3>Bonus 4</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
+								<?php $nBonus++; ?>
+							<?php endforeach ?>
 						</div>
 
 						<a class="left carousel-control" href="#the-carousel" role="button" data-slide="prev">
