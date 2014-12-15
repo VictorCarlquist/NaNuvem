@@ -139,7 +139,9 @@ DROP TABLE IF EXISTS `bonus`;
 CREATE TABLE `bonus` (
   `codigo` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
+  `descricao` text,
   `quantidade_espaco` bigint(20) NOT NULL,
+  `imagem` text,
   `codigo_acao` int(11) NOT NULL,
   PRIMARY KEY (`codigo`),
   KEY `fk_bonus_acoes1_idx` (`codigo_acao`),

@@ -34,13 +34,11 @@ select * from clientes;
   Planos
 */
 insert into planos (nome, descricao, valor, espaco) 
-  values ('Master', 'Pra quem é mais phoda ainda.', 5000, 5000);
+  values ('Cirus', 'O Plano Cirus, é o plano mais avançado do repositório de arquivos NaNuvem. É indicado para uso de empresas devido aos recursos oferecidos. O valor deste plano é de R$200,00 por mês, e possui como recursos: 30TB de armazenamento, um histórico de versões ilimitadas, um controle de log e um compartilhamento de arquivos ilimitado.', 20.00, 30000000);
 insert into planos (nome, descricao, valor, espaco) 
-  values ('Gold', 'Pra quem é phodão.', 1000, 1000);
+  values ('Autocumulus', 'O Plano Autocumulus, é o plano intermediário do repositório de arquivos NaNuvem. É indicado para usuários mais avançados. O valor deste plano é de R$50,00 por mês, e possui como recursos: 1TB de armazenamento, um histórico de versões que limita a 05 versões por arquivo e um compartilhamento de arquivos com no máximo 10 pessoas.', 50.00, 1000000);
 insert into planos (nome, descricao, valor, espaco) 
-  values ('Silver', 'Pra quem é phoda.', 500, 500);
-insert into planos (nome, descricao, valor, espaco) 
-  values ('Bronze', 'Pra quem é phodinha.', 250, 250);
+  values ('Stratus', 'O Stratus, é o plano básico do repositório de arquivos NaNuvem. É um plano gratuito, que possui como recursos: 3GB de armazenamento e um compartilhamento de arquivos com no máximo 05 pessoas.', 0.00, 3000);
     
 select * from planos;
 
@@ -73,12 +71,10 @@ select * from acoes;
 /*
   Bônus
 */
-insert into bonus (nome, quantidade_espaco, codigo_acao) values ('Light', 50, 1);
-insert into bonus (nome, quantidade_espaco, codigo_acao) values ('Medium', 75, 2);
-insert into bonus (nome, quantidade_espaco, codigo_acao) values ('Mega', 100, 3);
-insert into bonus (nome, quantidade_espaco, codigo_acao) values ('Ultra', 500, 4);
-insert into bonus (nome, quantidade_espaco, codigo_acao) values ('Power', 750, 5);
-insert into bonus (nome, quantidade_espaco, codigo_acao) values ('Supimpa',1000, 6);
+insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Light', 'Leia o nosso manual do Como Funciona e ganhe 500MB a mais em seu plano, além de ficar por dentro das vantagens que oferecemos aos nossos usuários com o uso do NaNuvem, você aumentará o seu espaço de armazenamento.', 50, 'bonus1.png', 1);
+insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Medium', 'Convide seus amigos para fazerem parte do NaNuvem e para cada amigo que se cadastrar você receberá 500MB a mais em seu plano.', 75, 'bonus2.png', 2);
+insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Mega', 'Bônus de fidelidade: a cada dois anos de cadastro, você irá receber 1GB a mais em seu plano.', 100, 'bonus3.png', 3);
+
 
 select * from bonus;
 
