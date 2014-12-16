@@ -176,7 +176,7 @@
 				               	//var pai = $("#" + evento).parent('ul').attr("id");
 
 
-								$( document ).on( "click", "li", function() {
+								$( document ).on( "click", "li", function(event) {
 									
 				                	var id = $(this).attr("id");
 									evento = $(event.target);
@@ -205,7 +205,7 @@
 
 								});
 
-								$( document ).on( "click", "li", function() {
+								$( document ).on( "click", "li", function(event) {
 									evento = $(event.target);
 					                DM.changeDirectory(evento.attr("id"));
 								});
