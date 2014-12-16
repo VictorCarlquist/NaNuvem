@@ -13,6 +13,7 @@ NANUVEM.DirectoryManager = function (fun, id_dir)
     this.currentPath = "/";
     this.files = [];
     this.dirs = [];
+    this.currentIdDir = 0;
 
     // private
     this.callback = fun;
@@ -32,6 +33,7 @@ NANUVEM.DirectoryManager.prototype._init = function (id_dir)
 NANUVEM.DirectoryManager.prototype.changeDirectory = function (id_dir)
 {
     this.getFiles(id_dir);
+    this.currentIdDir = id_dir;
     //this.callback();
 }
 
@@ -75,15 +77,16 @@ NANUVEM.DirectoryManager.prototype.getFiles = function (id_dir)
     NANUVEM.sendData(NANUVEM.URL_LOAD_FILES, values, 
         // função que será chamada ao receber os dados.
         function (data) {
-
+            var dir;
             for (var i = 0; i < mf.dirs.length; i++) {
                 if (mf.dirs[i].id == id_dir) {
                     mf.dirs[i].files = data.files;
+                    dir = mf.dirs[i];
                     break;
                 }
             }
             if (mf.callback)
-                mf.callback(data, NANUVEM.TYPE_FILE);
+                mf.callback(data, NANUVEM.TYPE_FILE, dir);
         }
     );
 }
@@ -130,10 +133,11 @@ NANUVEM.DirectoryManager.prototype.deleteComment = function (id_comment)
     );
 }
 
-NANUVEM.DirectoryManager.prototype.getVersions = function (id_file, id_dir)
+NANUVEM.DirectoryManager.prototype.getVersions = function (id_file)
 {
     var values = {'id':id_file};
     var mf = this;
+    var id_dir = this.currentIdDir;
 
     NANUVEM.sendData(NANUVEM.URL_VERSIONS, values, 
         // função que será chamada ao receber os dados.
