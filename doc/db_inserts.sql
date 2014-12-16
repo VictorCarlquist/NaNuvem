@@ -34,11 +34,19 @@ select * from clientes;
   Planos
 */
 insert into planos (nome, descricao, valor, espaco) 
-  values ('Cirus', 'O Plano Cirus, é o plano mais avançado do repositório de arquivos NaNuvem. É indicado para uso de empresas devido aos recursos oferecidos. O valor deste plano é de R$200,00 por mês, e possui como recursos: 30TB de armazenamento, um histórico de versões ilimitadas, um controle de log e um compartilhamento de arquivos ilimitado.', 20.00, 30000000);
+  values ('Cirus', 'O Plano Cirus, é o plano mais avançado do 
+			repositório de arquivos NaNuvem. É indicado para uso 
+			de empresas devido aos recursos oferecidos. O valor 
+            deste plano é de R$200,00 por mês, e possui como 
+            recursos: 30TB de armazenamento, um histórico de 
+            versões ilimitadas, um controle de log e um compartilhamento 
+            de arquivos ilimitado.', 20.00, 30000000);
 insert into planos (nome, descricao, valor, espaco) 
   values ('Autocumulus', 'O Plano Autocumulus, é o plano intermediário do repositório de arquivos NaNuvem. É indicado para usuários mais avançados. O valor deste plano é de R$50,00 por mês, e possui como recursos: 1TB de armazenamento, um histórico de versões que limita a 05 versões por arquivo e um compartilhamento de arquivos com no máximo 10 pessoas.', 50.00, 1000000);
 insert into planos (nome, descricao, valor, espaco) 
   values ('Stratus', 'O Stratus, é o plano básico do repositório de arquivos NaNuvem. É um plano gratuito, que possui como recursos: 3GB de armazenamento e um compartilhamento de arquivos com no máximo 05 pessoas.', 0.00, 3000);
+insert into planos (nome, descricao, valor, espaco) 
+  values ('Bronze', 'Pra quem é phodinha.', 250, 250);
     
 select * from planos;
 
@@ -71,10 +79,10 @@ select * from acoes;
 /*
   Bônus
 */
-insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Light', 'Leia o nosso manual do Como Funciona e ganhe 500MB a mais em seu plano, além de ficar por dentro das vantagens que oferecemos aos nossos usuários com o uso do NaNuvem, você aumentará o seu espaço de armazenamento.', 50, 'bonus1.png', 1);
-insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Medium', 'Convide seus amigos para fazerem parte do NaNuvem e para cada amigo que se cadastrar você receberá 500MB a mais em seu plano.', 75, 'bonus2.png', 2);
-insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Mega', 'Bônus de fidelidade: a cada dois anos de cadastro, você irá receber 1GB a mais em seu plano.', 100, 'bonus3.png', 3);
 
+insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Light', 'Leia o nosso manual do Como Funciona e ganhe 500MB a mais em seu plano, além de ficar por dentro das vantagens que oferecemos aos nossos usuários com o uso do NaNuvem, você aumentará o seu espaço de armazenamento.', 50, 'bonus1.png', 1);
+insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Medium', 'Convide seus amigos para fazerem parte do NaNuvem e para cada amigo que se cadastrar você receberá 500MB a mais em seu plano.', 75, 'bonus2.png', 2);		
+insert into bonus (nome, descricao, quantidade_espaco, imagem, codigo_acao) values ('Mega', 'Bônus de fidelidade: a cada dois anos de cadastro, você irá receber 1GB a mais em seu plano.', 100, 'bonus3.png', 3);
 
 select * from bonus;
 
@@ -87,12 +95,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 1, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 1, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 1, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 1, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 1, '2014-11-14');
 
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 2, '2014-11-19');   
@@ -100,12 +102,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 2, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 2, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 2, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 2, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 2, '2014-11-14');
     
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 3, '2014-11-19');   
@@ -113,12 +109,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 3, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 3, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 3, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 3, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 3, '2014-11-14');
 
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 4, '2014-11-19');   
@@ -126,12 +116,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 4, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 4, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 4, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 4, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 4, '2014-11-14');
 
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 5, '2014-11-19');   
@@ -139,12 +123,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 5, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 5, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 5, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 5, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 5, '2014-11-14');
     
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 6, '2014-11-19');   
@@ -152,12 +130,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 6, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 6, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 6, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 6, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 6, '2014-11-14');
     
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 7, '2014-11-19');   
@@ -165,12 +137,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 7, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 7, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 7, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 7, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 7, '2014-11-14');
     
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 8, '2014-11-19');   
@@ -178,12 +144,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 8, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 8, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 8, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 8, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 8, '2014-11-14');
     
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 9, '2014-11-19');   
@@ -191,12 +151,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 9, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 9, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 9, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 9, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 9, '2014-11-14');
     
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (1, 10, '2014-11-19');  
@@ -204,12 +158,6 @@ insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (2, 10, '2014-11-18');
 insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
   values (3, 10, '2014-11-17');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (4, 10, '2014-11-16');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (5, 10, '2014-11-15');
-insert into bonus_clientes (codigo_bonus, codigo_cliente, data_hora)
-  values (6, 10, '2014-11-14');
 
 select * from bonus_clientes;
 
@@ -779,9 +727,9 @@ insert into auditorias (funcao_codigo, usuario_codigo, data_hora) values (7, 5, 
 #select * from arquivos a where a.codigo = 1;
 #select codigo_arquivo, tamanho, data_hora from versoes v where codigo_arquivo=1 order by data_hora asc limit 1;
 
-#drop view listDirsFromClients;
-#create view listDirsFromClients as
-#select c.codigo as 'id_client', d.codigo as 'id', d.diretorio_pai as 'id_father', d.nome as 'name' from 
-#  diretorios d inner join clientes c on d.codigo_cliente=c.codigo order by d.diretorio_pai;
+drop view listDirsFromClients;
+create view listDirsFromClients as
+select c.codigo as 'id_client', d.codigo as 'id', d.diretorio_pai as 'id_father', d.nome as 'name' from 
+  diretorios d inner join clientes c on d.codigo_cliente=c.codigo order by d.diretorio_pai;
 
 #select * from listDirsFromClients where id_client=1;

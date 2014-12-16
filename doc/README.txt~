@@ -1,6 +1,0 @@
-Simplesmente carregue o arquivo 'db_na_nuvem.sql' com o seguinte comando:
-shell> mysql -u user -p na_nuvem < db_na_nuvem.sql
-
-
-Se precisar fazer backup dos dados, use: 
-shell> mysqldump -u user -p na_nuvem > db_na_nuvem.sql
