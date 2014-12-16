@@ -446,3 +446,10 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+drop view listDirsFromClients;
+create view listDirsFromClients as
+select c.codigo as 'id_client', d.codigo as 'id', d.diretorio_pai as 'id_father', d.nome as 'name' from 
+  diretorios d inner join clientes c on d.codigo_cliente=c.codigo order by d.diretorio_pai;
+
+select * from listDirsFromClients where id_client=1;
