@@ -56,7 +56,7 @@ class Page extends MY_Controller{
 		} else {
 
 			$this->load->model("clientemodel", "Cliente");
-			$this->Cliente->senha = $this->input->post("senha");
+			$this->Cliente->senha = $this->input->post("password");
 			$this->Cliente->email = $this->input->post("email");
 
 			$newdata = array(

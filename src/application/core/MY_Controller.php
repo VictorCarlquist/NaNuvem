@@ -11,7 +11,7 @@ class MY_Controller extends CI_Controller {
 			caso exista, o atributo $usuario é setado
 			Para verificar se ele esta ativo na sessão use isset($this->usuario)
 		**/
-		if($this->session->userdata('usuario')){
+		if($this->session->userdata('logged_in')){
 			$this->usuario = $this->session->userdata('usuario');
 		} else {
 			if (!$is_home) {
