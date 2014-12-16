@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Directory_manager extends CI_Controller 
+class Directory_manager extends MY_Controller
 {   
 
     public function get_files()
@@ -8,7 +8,7 @@ class Directory_manager extends CI_Controller
         $this->load->model('Directory_model', 'Directory');
 
         $cod_dir = $this->input->post('id');
-        $result = $this->Directory->get_files($cod_dir =1);
+        $result = $this->Directory->get_files($cod_dir);
 
         echo '{"files":'.json_encode($result).'}';
     }
@@ -85,7 +85,8 @@ class Directory_manager extends CI_Controller
         $this->load->model('Directory_model', 'Directory');
 
         //TODO : pegar o código do cliente na sessão
-        $result = $this->Directory->get_directories(1);
+        $this->load->library('session');
+        $result = $this->Directory->get_directories($this->session->userdata['usuario']['codigo']);
         echo '{"dirs":'.json_encode($result).'}';
     }
 
