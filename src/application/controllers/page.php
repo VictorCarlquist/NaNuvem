@@ -55,12 +55,12 @@ class Page extends MY_Controller{
 			$this->load->view('layout/footer');
 		} else {
 
-			$this->load->model("usuario_model", "Usuario");
-			$this->Usuario->senha = $this->input->post("senha");
-			$this->Usuario->email = $this->input->post("email");
+			$this->load->model("clientemodel", "Cliente");
+			$this->Cliente->senha = $this->input->post("senha");
+			$this->Cliente->email = $this->input->post("email");
 
 			$newdata = array(
-	           'usuario' => $this->Usuario->get(),
+	           'usuario' => $this->Cliente->getClient(),
 	           'logged_in' => TRUE
 	       	);
 
@@ -74,11 +74,11 @@ class Page extends MY_Controller{
 	//Verifica os dados para efetuar o login
 	public function checar_login($senha, $email)
 	{
-		$this->load->model("usuario_model", "Usuario");
-		$this->Usuario->senha = $senha;
-		$this->Usuario->email = $email;
+		$this->load->model("clientemodel", "Cliente");
+		$this->Cliente->senha = $senha;
+		$this->Cliente->email = $email;
 
-		$usuario = $this->Usuario->get();
+		$usuario = $this->Cliente->getClient();
 
 		if($usuario != null && $usuario->email == $email && $usuario->senha == $senha){
 			return TRUE;

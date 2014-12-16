@@ -6,7 +6,18 @@
 		var $senha;
 		var $email;	
 	
-		public function get($codigo = NULL)
+		public function getClient()
+		{
+			$where = array(
+				'email' => $this->email,
+				'senha' => $this->senha
+				);
+			$query = $this->db->get_where('clientes', $where);
+
+			return $query->row();
+		}
+
+		public function get($codigo)
 		{
 			$this->db->order_by('nome');
 
